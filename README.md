@@ -51,7 +51,7 @@
 DTIUIE-Reproduction/
 ├── README.md                      本文件
 ├── README_upstream.md             官方原版 README（存档）
-├── 网盘上传清单.md                 大文件（权重/数据集）下载指引
+├── 网盘下载说明.md                 大文件（权重/数据集）网盘下载、放置与校验
 ├── 复现交接文档.md                 完整复现手册：环境、显存实测、训练、踩坑、微调
 ├── environment.yaml               官方环境定义（作者原版）
 │
@@ -148,15 +148,24 @@ python underwater_train.py --database TIUIED --batch_size 1          # 约 1.5~2
 
 ## 四、预训练权重与数据集
 
-GitHub 单文件上限 100 MB，本项目的大文件（共 11.9 GB）**无法进入仓库**，统一走百度网盘：
+GitHub 单文件上限 100 MB，本项目的大文件（原始合计 11.9 GB）**无法进入仓库**，统一走百度网盘。
 
-| 文件 | 大小 | 说明 | 下载 |
-|---|---|---|---|
-| 完整训练结果包 | 1.83 GB | 含全部断点、三套权重、660 张图、TensorBoard | ⏳ 待补充链接 |
-| best_ssim.pth | 412 MB | 最佳 SSIM 权重（epoch 71） | ⏳ 待补充链接 |
-| best_miou.pth | 412 MB | 最佳 mIoU 权重（epoch 71） | ⏳ 待补充链接 |
-| final（epoch 100） | 412 MB | 最终权重 | ⏳ 待补充链接 |
-| latest_full.pth | 732 MB | 最终完整断点，可续训 | ⏳ 待补充链接 |
+### 本次复现产出的权重与结果
+
+📦 **百度网盘**：<https://pan.baidu.com/s/1pP3_FX1_h42Xjl01GJLdTA?pwd=fx62>　🔑 **提取码**：`fx62`
+
+| 文件 | 大小 | 说明 |
+|---|---|---|
+| `01_DTIUIE-training-results-20261003.tar.gz` | 1.83 GB | 完整训练结果包：全部断点 + 三套权重 + 660 张图 + TensorBoard + 运维源码 |
+| `02_model_dtiuie-best_ssim-epoch71.pth` | 412 MB | 最佳 SSIM 权重（epoch 71） |
+| `03_model_dtiuie-best_miou-epoch71.pth` | 412 MB | 最佳 mIoU 权重（epoch 71） |
+| `04_model_dtiuie-final-epoch100.pth` | 412 MB | 第 100 轮最终权重 |
+| `05_model_dtiuie-latest_full-resume.pth` | 732 MB | 最终完整断点，可断点续训 |
+
+包内附 `README_上传说明.txt`（放置方式）与 `SHA256SUMS.txt`（完整性校验）。
+把四个权重放进仓库根目录的 `checkpoints/` 即可推理；结果包解压后直接覆盖仓库根目录。
+
+> 完整下载说明（含放置路径、校验命令、未上传文件清单）见 [`网盘下载说明.md`](网盘下载说明.md)。
 
 **第三方资产**（论文作者发布，非本仓库产出）：
 
