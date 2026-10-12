@@ -53,3 +53,7 @@ desktop.ini
 *.bak
 gcm_trace.log
 gcm-diagnose.log
+
+# ---- 原上游仓库的 .git 备份（勿提交）----
+.git_upstream_backup/
+*.git_upstream_backup/
