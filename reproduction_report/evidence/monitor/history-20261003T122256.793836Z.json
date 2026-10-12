@@ -1,0 +1,317 @@
+{
+  "checked_at_utc": "2026-10-03T12:22:55.100516+00:00",
+  "host": "connect.westc.seetacloud.com",
+  "port": 18824,
+  "remote_run": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003",
+  "connection_ok": true,
+  "connection_attempts": 1,
+  "training": {
+    "heartbeat": {
+      "epoch": 96,
+      "batch": 295,
+      "total_batches": 381,
+      "global_step": 36490,
+      "loss_E": 0.03275401145219803,
+      "loss_S": 0.14680875837802887,
+      "loss_SA": 0.08317963778972626,
+      "last_saved_epoch": 95,
+      "latest_full": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003/latest_full.pth",
+      "run_id": "463f314c2d0645cfaa3568eae4df0753",
+      "status": "running",
+      "pid": 21263,
+      "updated_at_utc": "2026-10-03T12:22:50.625742+00:00",
+      "elapsed_seconds": 30558.08212949522,
+      "optimizers": {
+        "optimizer_E": [
+          {
+            "lr": 1.752016225895703e-06,
+            "weight_decay": 0.01,
+            "momentum": null,
+            "betas": [
+              0.9,
+              0.999
+            ]
+          }
+        ],
+        "optimizer_S": [
+          {
+            "lr": 0.0002511628575285302,
+            "weight_decay": 0.0001,
+            "momentum": 0.9,
+            "betas": null
+          }
+        ],
+        "optimizer_SA": [
+          {
+            "lr": 0.02,
+            "weight_decay": 0.0001,
+            "momentum": 0.9,
+            "betas": null
+          }
+        ]
+      },
+      "scalers": {
+        "scaler_E": 17179869184.0,
+        "scaler_S": 17179869184.0,
+        "scaler_SA": 17179869184.0
+      },
+      "gpu_peak_allocated_bytes": 16816599552,
+      "gpu_peak_reserved_bytes": 21049114624
+    },
+    "run_metadata": {
+      "format": "DTIUIE_MONITORED_FULL",
+      "schema_version": 1,
+      "run_id": "463f314c2d0645cfaa3568eae4df0753",
+      "original_source_sha256": "213bdf088fc32e8294bcb9e7f1c13f5cf1dd5270884926141ccdc2d5405143e0",
+      "monitored_source_sha256": "f52f96b3bfb1369c3eb33bee194aafd616dd02baa8628348fc7101a91a93cef7",
+      "observer_source_sha256": "c17033af2a169680e6a41e7099ab94cff251a44a6a35829ba7bc080610c2e151",
+      "run_dir": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003",
+      "current_time": "10-03-2026-11-53-32",
+      "status": "running",
+      "pid": 21263,
+      "hostname": "autodl-container-77c34795d5-1bbc053a",
+      "updated_at_utc": "2026-10-03T03:53:46.561562+00:00",
+      "args": {
+        "seed": 2022,
+        "database": "TIUIED",
+        "crop_size": 256,
+        "model_E": "model_dtiuie",
+        "model_S": "vgg16",
+        "resume": "False",
+        "resume_path": "/path/to/your/net.pth",
+        "use_pretain": "False",
+        "pretrained": null,
+        "val_criterion": "mIoU",
+        "batch_size": 4,
+        "epochs": 100,
+        "amp": false,
+        "gpus": 1,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.001,
+        "momentum": 0.9,
+        "decay_interval": [
+          150,
+          180
+        ],
+        "decay_ratio": 0.8,
+        "warmup_epochs": 10,
+        "log_dir": "tensorboard_logs",
+        "save_best_checkpoint": true,
+        "save_iter_checkpoint": false,
+        "save_final_checkpoint": true,
+        "loss_enc_pixel": "L1Loss",
+        "loss_enc_pixel_weight": 1.0,
+        "loss_enc_feat": "FeatureLoss",
+        "loss_enc_feat_weight": 1.0,
+        "loss_seg_raw": "AUXCELoss",
+        "loss_seg_raw_weight": 0.34,
+        "loss_seg_enc": "AUXCELoss",
+        "loss_seg_enc_weight": 0.34,
+        "loss_seg_mix": "AUXCELoss",
+        "loss_seg_mix_weight": 0.34,
+        "loss_seg_sa": "AUXCELoss",
+        "loss_seg_sa_weight": 1.0,
+        "info": null,
+        "run_dir": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003",
+        "resume_full": null,
+        "cudnn_benchmark": true,
+        "local_rank": -1,
+        "log_format_str": "tensorboard_logs/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32",
+        "best_model_file": "checkpoints/model_dtiuie_vgg/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32-best",
+        "final_model_file": "results/model_dtiuie_vgg/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32-final",
+        "save_result_file": "results/model_dtiuie_vgg/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32",
+        "tensorboard_dir": "tensorboardLogs",
+        "classes": 8
+      },
+      "torch": "1.13.1+cu116",
+      "cuda_runtime": "11.6",
+      "seed_behavior": "Author seed setting remains commented out",
+      "created_at_utc": "2026-10-03T03:53:32.543886+00:00",
+      "attempts": [
+        {
+          "started_at_utc": "2026-10-03T03:53:32.543891+00:00",
+          "pid": 21263,
+          "resume_full": null
+        }
+      ],
+      "packages": {
+        "torchvision": "0.14.1+cu116",
+        "numpy": "1.23.5",
+        "Pillow": "9.4.0",
+        "timm": "0.9.7",
+        "einops": "0.6.1",
+        "pandas": "2.0.0",
+        "scikit-image": "0.20.0",
+        "scipy": "1.9.1",
+        "kornia": "0.7.0",
+        "tensorboardX": "2.6"
+      },
+      "device": "cuda:0",
+      "cudnn_benchmark": true,
+      "start_epoch": 1,
+      "optimizer_configuration": {
+        "optimizer_E": [
+          {
+            "lr": 0.0001,
+            "weight_decay": 0.01,
+            "momentum": null,
+            "betas": [
+              0.9,
+              0.999
+            ]
+          }
+        ],
+        "optimizer_S": [
+          {
+            "lr": 0.02,
+            "weight_decay": 0.0001,
+            "momentum": 0.9,
+            "betas": null
+          }
+        ],
+        "optimizer_SA": [
+          {
+            "lr": 0.02,
+            "weight_decay": 0.0001,
+            "momentum": 0.9,
+            "betas": null
+          }
+        ]
+      },
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "total_memory_bytes": 25252724736,
+        "compute_capability": [
+          8,
+          9
+        ]
+      }
+    },
+    "failed": null,
+    "completed": null,
+    "supervisor_state": {
+      "status": "running",
+      "supervisor_pid": 21262,
+      "restarts": 0,
+      "started_at_utc": "2026-10-03T03:53:30.563762+00:00",
+      "run_dir": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003",
+      "training_log": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003.train.log",
+      "target_epochs": 100,
+      "batch_size": 4,
+      "algorithm": "official code defaults",
+      "child_pid": 21263,
+      "command": [
+        "/root/autodl-tmp/envs/dtiuie-legacy/bin/python",
+        "-u",
+        "-B",
+        "cloud_reproduction/underwater_train_monitored.py",
+        "--database",
+        "TIUIED",
+        "--model_E",
+        "model_dtiuie",
+        "--model_S",
+        "vgg16",
+        "--batch_size",
+        "4",
+        "--epochs",
+        "100",
+        "--crop_size",
+        "256",
+        "--warmup_epochs",
+        "10",
+        "--run_dir",
+        "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003",
+        "--cudnn_benchmark"
+      ],
+      "resume_full": null,
+      "updated_at_utc": "2026-10-03T12:21:59.504535+00:00",
+      "last_observed_heartbeat": {
+        "epoch": 96,
+        "batch": 225,
+        "total_batches": 381,
+        "global_step": 36420,
+        "loss_E": 0.030406691133975983,
+        "loss_S": 0.18655580282211304,
+        "loss_SA": 0.06827504187822342,
+        "last_saved_epoch": 95,
+        "latest_full": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003/latest_full.pth",
+        "run_id": "463f314c2d0645cfaa3568eae4df0753",
+        "status": "running",
+        "pid": 21263,
+        "updated_at_utc": "2026-10-03T12:21:53.734459+00:00",
+        "elapsed_seconds": 30501.190845936537,
+        "optimizers": {
+          "optimizer_E": [
+            {
+              "lr": 1.752016225895703e-06,
+              "weight_decay": 0.01,
+              "momentum": null,
+              "betas": [
+                0.9,
+                0.999
+              ]
+            }
+          ],
+          "optimizer_S": [
+            {
+              "lr": 0.0002511628575285302,
+              "weight_decay": 0.0001,
+              "momentum": 0.9,
+              "betas": null
+            }
+          ],
+          "optimizer_SA": [
+            {
+              "lr": 0.02,
+              "weight_decay": 0.0001,
+              "momentum": 0.9,
+              "betas": null
+            }
+          ]
+        },
+        "scalers": {
+          "scaler_E": 17179869184.0,
+          "scaler_S": 17179869184.0,
+          "scaler_SA": 17179869184.0
+        },
+        "gpu_peak_allocated_bytes": 16816599552,
+        "gpu_peak_reserved_bytes": 21049114624
+      },
+      "disk_free_bytes": 43624828928,
+      "warnings": [],
+      "last_checkpoint_epoch": 95,
+      "heartbeat_age_seconds": 5.769991
+    }
+  },
+  "gpu": {
+    "exit_code": 0,
+    "stdout": "0, NVIDIA GeForce RTX 4090 D, 18722, 24564, 93, 68",
+    "stderr": ""
+  },
+  "disk": {
+    "exit_code": 0,
+    "stdout": "Filesystem     1024-blocks    Used Available Capacity Mounted on\n/dev/md0          52428800 9824444  42604356      19% /root/autodl-tmp",
+    "stderr": ""
+  },
+  "process": {
+    "pid": 21263,
+    "alive": true,
+    "details": {
+      "exit_code": 0,
+      "stdout": "21263   30567 Rl   /root/autodl-tmp/envs/dtiuie-legacy/bin/python -u -B cloud_reproduction/underwater_train_monitored.py --database TIUIED --model_E model_dtiuie --model_S vgg16 --batch_size 4 --epochs 100 --crop_size 256 --warmup_epochs 10 --run_dir /root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003 --cudnn_benchmark",
+      "stderr": ""
+    }
+  },
+  "latest_checkpoint": {
+    "path": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003/latest_full.pth",
+    "size_bytes": 767252349,
+    "mtime_unix": 1791029929
+  },
+  "epoch": 96,
+  "last_saved_epoch": 95,
+  "training_status": "running",
+  "warnings": [],
+  "heartbeat_age_seconds": 6.157854,
+  "finished_at_utc": "2026-10-03T12:22:56.793825+00:00",
+  "exit_code": 0
+}

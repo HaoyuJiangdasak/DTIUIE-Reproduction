@@ -1,0 +1,81 @@
+{
+  "scope": "Local four-image inference validation; not a cloud result or paper-table evaluation",
+  "protocols": {
+    "model_S": {
+      "torch": "2.7.1+cu128",
+      "torchvision": "0.22.1+cu128",
+      "python": "3.9.25",
+      "packages": {
+        "numpy": "1.23.5",
+        "Pillow": "11.3.0",
+        "timm": "0.9.7",
+        "einops": "0.6.1"
+      },
+      "checkpoint_epoch": 28,
+      "model_E_parameters": 8923734,
+      "guidance_parameters": 41897064,
+      "inference_seconds": 1.1743281000000003,
+      "total_seconds": 3.8907368,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "compute_capability": [
+          12,
+          0
+        ],
+        "total_memory_bytes": 8546484224,
+        "peak_allocated_bytes": 706305024,
+        "peak_reserved_bytes": 987758592
+      },
+      "completed_count": 4
+    },
+    "model_SA": {
+      "torch": "2.7.1+cu128",
+      "torchvision": "0.22.1+cu128",
+      "python": "3.9.25",
+      "packages": {
+        "numpy": "1.23.5",
+        "Pillow": "11.3.0",
+        "timm": "0.9.7",
+        "einops": "0.6.1"
+      },
+      "checkpoint_epoch": 28,
+      "model_E_parameters": 8923734,
+      "guidance_parameters": 41897064,
+      "inference_seconds": 0.9781237999999997,
+      "total_seconds": 3.3370908000000004,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "compute_capability": [
+          12,
+          0
+        ],
+        "total_memory_bytes": 8546484224,
+        "peak_allocated_bytes": 706305024,
+        "peak_reserved_bytes": 987758592
+      },
+      "completed_count": 4
+    }
+  },
+  "comparisons": [
+    {
+      "name": "d_r_122_.jpg",
+      "model_S_vs_model_SA_mean_absolute_uint8_difference": 1.53594970703125,
+      "previous_smoke_vs_new_model_S_jpeg_mean_absolute_difference": 5.4886016845703125
+    },
+    {
+      "name": "d_r_129_.jpg",
+      "model_S_vs_model_SA_mean_absolute_uint8_difference": 1.4080352783203125,
+      "previous_smoke_vs_new_model_S_jpeg_mean_absolute_difference": 3.861628293991089
+    },
+    {
+      "name": "d_r_144_.jpg",
+      "model_S_vs_model_SA_mean_absolute_uint8_difference": 0.5008087158203125,
+      "previous_smoke_vs_new_model_S_jpeg_mean_absolute_difference": 11.334254264831543
+    },
+    {
+      "name": "d_r_166_.jpg",
+      "model_S_vs_model_SA_mean_absolute_uint8_difference": 1.3927764892578125,
+      "previous_smoke_vs_new_model_S_jpeg_mean_absolute_difference": 4.517059326171875
+    }
+  ]
+}

@@ -1,0 +1,2702 @@
+{
+  "status": "complete",
+  "started_at_utc": "2026-10-03T12:46:10.629893+00:00",
+  "python": "3.9.16",
+  "packages": {
+    "numpy": "1.23.5",
+    "Pillow": "9.4.0",
+    "timm": "0.9.7",
+    "einops": "0.6.1"
+  },
+  "torch": "1.13.1+cu116",
+  "torchvision": "0.14.1+cu116",
+  "cuda_runtime": "11.6",
+  "cudnn_version": 8302,
+  "device": "cuda:0",
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4090 D",
+    "compute_capability": [
+      8,
+      9
+    ],
+    "total_memory_bytes": 25252724736,
+    "peak_allocated_bytes": 629103104,
+    "peak_reserved_bytes": 887095296
+  },
+  "checkpoint": "/root/autodl-tmp/DTIUIE/results/model_dtiuie_vgg/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32-final",
+  "checkpoint_sha256": "c21e6720775c5219f00bb56e4a52933a22ae38838f645fbcb71247eb657f704a",
+  "checkpoint_load_weights_only": false,
+  "checkpoint_epoch": 100,
+  "guidance": "model_SA",
+  "input_dir": "/root/autodl-tmp/DTIUIE/dataset/test/images",
+  "output_dir": "/root/autodl-tmp/DTIUIE/outputs/trained_final_model_SA_20261003",
+  "limit": null,
+  "expected_count": 110,
+  "completed_count": 110,
+  "input_color": "RGB",
+  "input_range": [
+    0.0,
+    1.0
+  ],
+  "input_normalization": "PIL RGB to torchvision to_tensor; no mean/std",
+  "preprocessing": "bicubic align to multiples of 32 (area cap 1088x1920), then bicubic to 256x256; align_corners=False",
+  "output_size_hw": [
+    256,
+    256
+  ],
+  "postprocessing": "original model normalize_img; original bicubic 256x256; multiply by 255 then uint8 truncation",
+  "jpeg_encoding": "PIL JPEG defaults; original JPG/JPEG basename preserved",
+  "additional_png": true,
+  "model_E_parameters": 8923734,
+  "guidance_parameters": 41897064,
+  "precision": {
+    "model_dtype": "torch.float32",
+    "autocast": false,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "images": [
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_122_.jpg",
+      "input_size_hw": [
+        540,
+        960
+      ],
+      "aligned_size_hw": [
+        544,
+        960
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_122_.jpg",
+      "png": "png/d_r_122_.png",
+      "elapsed_seconds": 2.703598575666547
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_129_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_129_.jpg",
+      "png": "png/d_r_129_.png",
+      "elapsed_seconds": 0.07826410792768002
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_144_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_144_.jpg",
+      "png": "png/d_r_144_.png",
+      "elapsed_seconds": 0.07623913325369358
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_166_.jpg",
+      "input_size_hw": [
+        720,
+        1280
+      ],
+      "aligned_size_hw": [
+        736,
+        1280
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_166_.jpg",
+      "png": "png/d_r_166_.png",
+      "elapsed_seconds": 0.10826071165502071
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_182_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_182_.jpg",
+      "png": "png/d_r_182_.png",
+      "elapsed_seconds": 0.08866549283266068
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_196_.jpg",
+      "input_size_hw": [
+        540,
+        960
+      ],
+      "aligned_size_hw": [
+        544,
+        960
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_196_.jpg",
+      "png": "png/d_r_196_.png",
+      "elapsed_seconds": 0.08975845202803612
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_233_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_233_.jpg",
+      "png": "png/d_r_233_.png",
+      "elapsed_seconds": 0.0900775920599699
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_277_.jpg",
+      "input_size_hw": [
+        1080,
+        1906
+      ],
+      "aligned_size_hw": [
+        1088,
+        1920
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_277_.jpg",
+      "png": "png/d_r_277_.png",
+      "elapsed_seconds": 0.10940313525497913
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_300_.jpg",
+      "input_size_hw": [
+        720,
+        1280
+      ],
+      "aligned_size_hw": [
+        736,
+        1280
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_300_.jpg",
+      "png": "png/d_r_300_.png",
+      "elapsed_seconds": 0.10934106260538101
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_345_.jpg",
+      "input_size_hw": [
+        416,
+        416
+      ],
+      "aligned_size_hw": [
+        416,
+        416
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_345_.jpg",
+      "png": "png/d_r_345_.png",
+      "elapsed_seconds": 0.09240365028381348
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_379_.jpg",
+      "input_size_hw": [
+        540,
+        960
+      ],
+      "aligned_size_hw": [
+        544,
+        960
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_379_.jpg",
+      "png": "png/d_r_379_.png",
+      "elapsed_seconds": 0.09202376380562782
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_384_.jpg",
+      "input_size_hw": [
+        720,
+        1152
+      ],
+      "aligned_size_hw": [
+        736,
+        1152
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_384_.jpg",
+      "png": "png/d_r_384_.png",
+      "elapsed_seconds": 0.10248686373233795
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_386_.jpg",
+      "input_size_hw": [
+        540,
+        960
+      ],
+      "aligned_size_hw": [
+        544,
+        960
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_386_.jpg",
+      "png": "png/d_r_386_.png",
+      "elapsed_seconds": 0.08520417101681232
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_465_.jpg",
+      "input_size_hw": [
+        448,
+        480
+      ],
+      "aligned_size_hw": [
+        448,
+        480
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_465_.jpg",
+      "png": "png/d_r_465_.png",
+      "elapsed_seconds": 0.10012552887201309
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_47_.jpg",
+      "input_size_hw": [
+        448,
+        480
+      ],
+      "aligned_size_hw": [
+        448,
+        480
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_47_.jpg",
+      "png": "png/d_r_47_.png",
+      "elapsed_seconds": 0.09946650825440884
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_547_.jpg",
+      "input_size_hw": [
+        360,
+        640
+      ],
+      "aligned_size_hw": [
+        384,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_547_.jpg",
+      "png": "png/d_r_547_.png",
+      "elapsed_seconds": 0.0929593238979578
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_552_.jpg",
+      "input_size_hw": [
+        720,
+        1280
+      ],
+      "aligned_size_hw": [
+        736,
+        1280
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_552_.jpg",
+      "png": "png/d_r_552_.png",
+      "elapsed_seconds": 0.10697457194328308
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_58_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_58_.jpg",
+      "png": "png/d_r_58_.png",
+      "elapsed_seconds": 0.08697710372507572
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_598_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_598_.jpg",
+      "png": "png/d_r_598_.png",
+      "elapsed_seconds": 0.09226115606725216
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_602_.jpg",
+      "input_size_hw": [
+        540,
+        960
+      ],
+      "aligned_size_hw": [
+        544,
+        960
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_602_.jpg",
+      "png": "png/d_r_602_.png",
+      "elapsed_seconds": 0.09138084761798382
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_635_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_635_.jpg",
+      "png": "png/d_r_635_.png",
+      "elapsed_seconds": 0.09333285316824913
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_801_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_801_.jpg",
+      "png": "png/d_r_801_.png",
+      "elapsed_seconds": 0.09452496469020844
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/d_r_84_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_84_.jpg",
+      "png": "png/d_r_84_.png",
+      "elapsed_seconds": 0.08773574978113174
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1033_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1033_.jpg",
+      "png": "png/f_r_1033_.png",
+      "elapsed_seconds": 0.07657068595290184
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1059_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1059_.jpg",
+      "png": "png/f_r_1059_.png",
+      "elapsed_seconds": 0.08088536933064461
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_106_.jpg",
+      "input_size_hw": [
+        540,
+        960
+      ],
+      "aligned_size_hw": [
+        544,
+        960
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_106_.jpg",
+      "png": "png/f_r_106_.png",
+      "elapsed_seconds": 0.08700660802423954
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1079_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1079_.jpg",
+      "png": "png/f_r_1079_.png",
+      "elapsed_seconds": 0.08266600593924522
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1165_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1165_.jpg",
+      "png": "png/f_r_1165_.png",
+      "elapsed_seconds": 0.10168958827853203
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1199_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1199_.jpg",
+      "png": "png/f_r_1199_.png",
+      "elapsed_seconds": 0.09815589897334576
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1220_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1220_.jpg",
+      "png": "png/f_r_1220_.png",
+      "elapsed_seconds": 0.09104359522461891
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1229_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1229_.jpg",
+      "png": "png/f_r_1229_.png",
+      "elapsed_seconds": 0.10296155326068401
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1276_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1276_.jpg",
+      "png": "png/f_r_1276_.png",
+      "elapsed_seconds": 0.08726787194609642
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1282_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1282_.jpg",
+      "png": "png/f_r_1282_.png",
+      "elapsed_seconds": 0.09161720424890518
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1298_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1298_.jpg",
+      "png": "png/f_r_1298_.png",
+      "elapsed_seconds": 0.08140127547085285
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1303_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1303_.jpg",
+      "png": "png/f_r_1303_.png",
+      "elapsed_seconds": 0.08944548293948174
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1319_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1319_.jpg",
+      "png": "png/f_r_1319_.png",
+      "elapsed_seconds": 0.08033043146133423
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1340_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1340_.jpg",
+      "png": "png/f_r_1340_.png",
+      "elapsed_seconds": 0.08117045275866985
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_13_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_13_.jpg",
+      "png": "png/f_r_13_.png",
+      "elapsed_seconds": 0.08787252381443977
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1410_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1410_.jpg",
+      "png": "png/f_r_1410_.png",
+      "elapsed_seconds": 0.08359267562627792
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1428_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1428_.jpg",
+      "png": "png/f_r_1428_.png",
+      "elapsed_seconds": 0.08308197185397148
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1435_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1435_.jpg",
+      "png": "png/f_r_1435_.png",
+      "elapsed_seconds": 0.09462237358093262
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1440_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1440_.jpg",
+      "png": "png/f_r_1440_.png",
+      "elapsed_seconds": 0.07577085122466087
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1450_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1450_.jpg",
+      "png": "png/f_r_1450_.png",
+      "elapsed_seconds": 0.08069496043026447
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1452_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1452_.jpg",
+      "png": "png/f_r_1452_.png",
+      "elapsed_seconds": 0.09282542951405048
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1461_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1461_.jpg",
+      "png": "png/f_r_1461_.png",
+      "elapsed_seconds": 0.09235703013837337
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1467_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1467_.jpg",
+      "png": "png/f_r_1467_.png",
+      "elapsed_seconds": 0.08877571672201157
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1471_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1471_.jpg",
+      "png": "png/f_r_1471_.png",
+      "elapsed_seconds": 0.08829307928681374
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1478_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1478_.jpg",
+      "png": "png/f_r_1478_.png",
+      "elapsed_seconds": 0.07514722272753716
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1644_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1644_.jpg",
+      "png": "png/f_r_1644_.png",
+      "elapsed_seconds": 0.07600249163806438
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1737_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1737_.jpg",
+      "png": "png/f_r_1737_.png",
+      "elapsed_seconds": 0.0835219044238329
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1782_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1782_.jpg",
+      "png": "png/f_r_1782_.png",
+      "elapsed_seconds": 0.09390801750123501
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1800_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1800_.jpg",
+      "png": "png/f_r_1800_.png",
+      "elapsed_seconds": 0.0801219753921032
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1892_.jpg",
+      "input_size_hw": [
+        540,
+        960
+      ],
+      "aligned_size_hw": [
+        544,
+        960
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1892_.jpg",
+      "png": "png/f_r_1892_.png",
+      "elapsed_seconds": 0.08727756887674332
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1920_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1920_.jpg",
+      "png": "png/f_r_1920_.png",
+      "elapsed_seconds": 0.08995470777153969
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1931_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1931_.jpg",
+      "png": "png/f_r_1931_.png",
+      "elapsed_seconds": 0.08472121879458427
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1948_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1948_.jpg",
+      "png": "png/f_r_1948_.png",
+      "elapsed_seconds": 0.08632051572203636
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1965_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1965_.jpg",
+      "png": "png/f_r_1965_.png",
+      "elapsed_seconds": 0.09530561417341232
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_1992_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_1992_.jpg",
+      "png": "png/f_r_1992_.png",
+      "elapsed_seconds": 0.08211367204785347
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_2052_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_2052_.jpg",
+      "png": "png/f_r_2052_.png",
+      "elapsed_seconds": 0.08664930798113346
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_209_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_209_.jpg",
+      "png": "png/f_r_209_.png",
+      "elapsed_seconds": 0.08869479782879353
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_214_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_214_.jpg",
+      "png": "png/f_r_214_.png",
+      "elapsed_seconds": 0.09235534071922302
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_246_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_246_.jpg",
+      "png": "png/f_r_246_.png",
+      "elapsed_seconds": 0.07995795272290707
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_24_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_24_.jpg",
+      "png": "png/f_r_24_.png",
+      "elapsed_seconds": 0.09199360758066177
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_263_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_263_.jpg",
+      "png": "png/f_r_263_.png",
+      "elapsed_seconds": 0.0834713950753212
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_329_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_329_.jpg",
+      "png": "png/f_r_329_.png",
+      "elapsed_seconds": 0.09192412160336971
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_392_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_392_.jpg",
+      "png": "png/f_r_392_.png",
+      "elapsed_seconds": 0.07552552409470081
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_403_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_403_.jpg",
+      "png": "png/f_r_403_.png",
+      "elapsed_seconds": 0.08165150694549084
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_446_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_446_.jpg",
+      "png": "png/f_r_446_.png",
+      "elapsed_seconds": 0.08101960644125938
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_478_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_478_.jpg",
+      "png": "png/f_r_478_.png",
+      "elapsed_seconds": 0.08180378936231136
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_54_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_54_.jpg",
+      "png": "png/f_r_54_.png",
+      "elapsed_seconds": 0.07722249999642372
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_604_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_604_.jpg",
+      "png": "png/f_r_604_.png",
+      "elapsed_seconds": 0.07621042989194393
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_644_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_644_.jpg",
+      "png": "png/f_r_644_.png",
+      "elapsed_seconds": 0.08041612803936005
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_721_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_721_.jpg",
+      "png": "png/f_r_721_.png",
+      "elapsed_seconds": 0.10027188435196877
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/f_r_93_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/f_r_93_.jpg",
+      "png": "png/f_r_93_.png",
+      "elapsed_seconds": 0.08133417554199696
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_0_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_0_.jpg",
+      "png": "png/n_l_0_.png",
+      "elapsed_seconds": 0.09131117165088654
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_100_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_100_.jpg",
+      "png": "png/n_l_100_.png",
+      "elapsed_seconds": 0.09422826208174229
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_102_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_102_.jpg",
+      "png": "png/n_l_102_.png",
+      "elapsed_seconds": 0.08172303065657616
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_12_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_12_.jpg",
+      "png": "png/n_l_12_.png",
+      "elapsed_seconds": 0.09230038523674011
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_15_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_15_.jpg",
+      "png": "png/n_l_15_.png",
+      "elapsed_seconds": 0.07654853351414204
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_18_.jpg",
+      "input_size_hw": [
+        540,
+        960
+      ],
+      "aligned_size_hw": [
+        544,
+        960
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_18_.jpg",
+      "png": "png/n_l_18_.png",
+      "elapsed_seconds": 0.09714641980826855
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_26_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_26_.jpg",
+      "png": "png/n_l_26_.png",
+      "elapsed_seconds": 0.0829440988600254
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_29_.jpg",
+      "input_size_hw": [
+        540,
+        960
+      ],
+      "aligned_size_hw": [
+        544,
+        960
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_29_.jpg",
+      "png": "png/n_l_29_.png",
+      "elapsed_seconds": 0.09385974518954754
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_3_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_3_.jpg",
+      "png": "png/n_l_3_.png",
+      "elapsed_seconds": 0.07619575038552284
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_44_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_44_.jpg",
+      "png": "png/n_l_44_.png",
+      "elapsed_seconds": 0.08984534256160259
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_48_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_48_.jpg",
+      "png": "png/n_l_48_.png",
+      "elapsed_seconds": 0.09532817080616951
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_52_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_52_.jpg",
+      "png": "png/n_l_52_.png",
+      "elapsed_seconds": 0.09610297530889511
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_79_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_79_.jpg",
+      "png": "png/n_l_79_.png",
+      "elapsed_seconds": 0.07660994492471218
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_84_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_84_.jpg",
+      "png": "png/n_l_84_.png",
+      "elapsed_seconds": 0.08181744813919067
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/n_l_87_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/n_l_87_.jpg",
+      "png": "png/n_l_87_.png",
+      "elapsed_seconds": 0.08970367535948753
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_101_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_101_.jpg",
+      "png": "png/w_r_101_.png",
+      "elapsed_seconds": 0.0841987319290638
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_109_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_109_.jpg",
+      "png": "png/w_r_109_.png",
+      "elapsed_seconds": 0.08704192377626896
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_10_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_10_.jpg",
+      "png": "png/w_r_10_.png",
+      "elapsed_seconds": 0.09366784989833832
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_111_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_111_.jpg",
+      "png": "png/w_r_111_.png",
+      "elapsed_seconds": 0.08579489588737488
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_116_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_116_.jpg",
+      "png": "png/w_r_116_.png",
+      "elapsed_seconds": 0.09161253087222576
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_147_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_147_.jpg",
+      "png": "png/w_r_147_.png",
+      "elapsed_seconds": 0.08162507228553295
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_14_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_14_.jpg",
+      "png": "png/w_r_14_.png",
+      "elapsed_seconds": 0.09328674338757992
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_150_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_150_.jpg",
+      "png": "png/w_r_150_.png",
+      "elapsed_seconds": 0.09830275736749172
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_157_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_157_.jpg",
+      "png": "png/w_r_157_.png",
+      "elapsed_seconds": 0.09188659116625786
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_199_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_199_.jpg",
+      "png": "png/w_r_199_.png",
+      "elapsed_seconds": 0.08788202702999115
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_201_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_201_.jpg",
+      "png": "png/w_r_201_.png",
+      "elapsed_seconds": 0.08064972050487995
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_217_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_217_.jpg",
+      "png": "png/w_r_217_.png",
+      "elapsed_seconds": 0.09847311489284039
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_22_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_22_.jpg",
+      "png": "png/w_r_22_.png",
+      "elapsed_seconds": 0.07873272709548473
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_30_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_30_.jpg",
+      "png": "png/w_r_30_.png",
+      "elapsed_seconds": 0.08713189512491226
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_3_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_3_.jpg",
+      "png": "png/w_r_3_.png",
+      "elapsed_seconds": 0.08896931074559689
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_43_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_43_.jpg",
+      "png": "png/w_r_43_.png",
+      "elapsed_seconds": 0.08270377852022648
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_4_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_4_.jpg",
+      "png": "png/w_r_4_.png",
+      "elapsed_seconds": 0.0844953078776598
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_50_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_50_.jpg",
+      "png": "png/w_r_50_.png",
+      "elapsed_seconds": 0.0907322820276022
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_59_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_59_.jpg",
+      "png": "png/w_r_59_.png",
+      "elapsed_seconds": 0.08877973444759846
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_6_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_6_.jpg",
+      "png": "png/w_r_6_.png",
+      "elapsed_seconds": 0.08840886503458023
+    },
+    {
+      "input": "/root/autodl-tmp/DTIUIE/dataset/test/images/w_r_84_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/w_r_84_.jpg",
+      "png": "png/w_r_84_.png",
+      "elapsed_seconds": 0.09262306056916714
+    }
+  ],
+  "inference_seconds": 12.48167291842401,
+  "total_seconds": 17.96172576583922
+}

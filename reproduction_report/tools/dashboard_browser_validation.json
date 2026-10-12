@@ -1,0 +1,14 @@
+{
+  "title": "DTIUIE完整复现可视化报告",
+  "chart_count": 4,
+  "html_sha256": "14b49cdad6870e5d0a91282867aca9d728cc69ff295ac0ab4e4682b3a86726dc",
+  "desktop_body_width": 1459,
+  "desktop_viewport_width": 1459,
+  "loss_trace_count": 3,
+  "gpu_trace_count": 3,
+  "plotly_version": "4.0.0",
+  "javascript_errors": [],
+  "mobile_body_width": 375,
+  "mobile_viewport_width": 375,
+  "status": "PASS"
+}

@@ -1,0 +1,144 @@
+[
+  {
+    "name": "fig01_workflow",
+    "title": "复现流程：从输入数据到可核验结果",
+    "caption": "来源：官方训练源码、run_metadata.json、completed.json；本次未加载发布的DTIUIE检查点，VGG编码器采用作者指定ImageNet初始化。",
+    "sources": [
+      "underwater_train.py",
+      "run_metadata.json",
+      "completed.json"
+    ],
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  },
+  {
+    "name": "fig02_losses",
+    "title": "三阶段损失与TDP启用过程",
+    "caption": "来源：TensorBoard完整scalar与训练INFO日志；浅色区为epoch 1–10，虚线为TDP启用边界。单次运行，不绘制重复实验置信区间。",
+    "sources": [
+      "data/epochs.csv",
+      "TensorBoard event file"
+    ],
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  },
+  {
+    "name": "fig03_validation",
+    "title": "100轮内部验证：最佳SSIM与mIoU均在第71轮",
+    "caption": "来源：每轮TensorBoard验证scalar，110张内部验证图；mIoU汇总8类，Dice排除背景并按图平均。此图不是论文表II的下游重训成绩。",
+    "sources": [
+      "data/epochs.csv",
+      "seg_eval.py"
+    ],
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  },
+  {
+    "name": "fig04_lr",
+    "title": "真实学习率：区分实际参数与未生效的CLI参数",
+    "caption": "E来自TensorBoard；S由作者cosine规则恢复、巡检点交叉核验；SA保持官方恒定lr。AdamW实际weight decay=0.01，而日志CLI写0.001。",
+    "sources": [
+      "data/epochs.csv",
+      "utils/lr_scheduler.py",
+      "run_metadata.json"
+    ],
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  },
+  {
+    "name": "fig05_gpu",
+    "title": "GPU全程巡检：利用率、显存与温度",
+    "caption": "来源：本机SSH巡检history JSON；图中点是离散实测，连线仅帮助阅读，>7分钟观测缺口断开。空闲/验证点不等同训练停顿；未连续记录功率，故不计算能耗。",
+    "sources": [
+      "data/gpu_samples.csv",
+      "monitor/history-*.json"
+    ],
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  },
+  {
+    "name": "fig06_epoch_runtime",
+    "title": "耗时与进度：100轮在8小时52分钟内完成",
+    "caption": "来源：TensorBoard验证wall_time；柱形间隔不能解释为纯GPU计算耗时。首轮包含初始化，最终完成时间另由completed.json记录。",
+    "sources": [
+      "data/epochs.csv",
+      "completed.json"
+    ],
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  },
+  {
+    "name": "fig07_timeline",
+    "title": "任务时间线：训练、巡检与断点回收",
+    "caption": "来源：TensorBoard、巡检JSON与备份记录。橙色条是包含断点传输的整次巡检时间，非纯下载计时；此时训练继续。未记录的环境准备时长不补造。",
+    "sources": [
+      "data/epochs.csv",
+      "data/monitor_checks.csv",
+      "data/checkpoints/chronology.csv"
+    ],
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  },
+  {
+    "name": "fig08_data_audit",
+    "title": "数据完整性审计与已知训练mask尺寸差异",
+    "caption": "来源：data_audit.json；所有mask为L模式、ID 0–7。37张尺寸差异没有擅自裁剪；单独resize仍可能造成语义对齐偏差，是复现限制。",
+    "sources": [
+      "cloud_reproduction/data_audit.json"
+    ],
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  },
+  {
+    "name": "fig09_image_comparison",
+    "title": "可追溯样例：输入、Reference与重新训练输出",
+    "caption": "来源：明确列出的4个测试文件与已校验训练输出；样例是按文件名选取，不代表完整测试集。显示resize只供视觉对比，不由此重新计算指标。",
+    "sources": [
+      "dataset/test",
+      "outputs/trained_best_ssim_model_SA_20261003",
+      "outputs/trained_final_model_SA_20261003"
+    ],
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  },
+  {
+    "name": "fig10_step_loss",
+    "title": "38,100个训练step：原始波动与明确标注的平滑曲线",
+    "caption": "来源：TensorBoard完整scalar；浅线为原始点，粗线为381-step滚动中位数，不是统计置信区间。未进行下采样或替换异常点。",
+    "sources": [
+      "data/iterations.csv"
+    ],
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+# Optional, for repository image-quality functions; inference does not require these.
+scikit-image==0.20.0
+scipy==1.9.1
+kornia==0.7.0

@@ -1,0 +1,20 @@
+[
+  {
+    "file": "matlab_gpu_temperature.pdf",
+    "pages": 1,
+    "embedded_font_count": 1,
+    "text_characters": 147
+  },
+  {
+    "file": "matlab_gpu_utilization_memory.pdf",
+    "pages": 1,
+    "embedded_font_count": 1,
+    "text_characters": 313
+  },
+  {
+    "file": "matlab_training_validation.pdf",
+    "pages": 1,
+    "embedded_font_count": 1,
+    "text_characters": 609
+  }
+]

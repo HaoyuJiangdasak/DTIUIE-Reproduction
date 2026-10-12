@@ -1,0 +1,95 @@
+{
+  "status": "finalizing",
+  "supervisor_pid": 21262,
+  "restarts": 0,
+  "started_at_utc": "2026-10-03T03:53:30.563762+00:00",
+  "run_dir": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003",
+  "training_log": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003.train.log",
+  "target_epochs": 100,
+  "batch_size": 4,
+  "algorithm": "official code defaults",
+  "child_pid": 21263,
+  "command": [
+    "/root/autodl-tmp/envs/dtiuie-legacy/bin/python",
+    "-u",
+    "-B",
+    "cloud_reproduction/underwater_train_monitored.py",
+    "--database",
+    "TIUIED",
+    "--model_E",
+    "model_dtiuie",
+    "--model_S",
+    "vgg16",
+    "--batch_size",
+    "4",
+    "--epochs",
+    "100",
+    "--crop_size",
+    "256",
+    "--warmup_epochs",
+    "10",
+    "--run_dir",
+    "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003",
+    "--cudnn_benchmark"
+  ],
+  "resume_full": null,
+  "updated_at_utc": "2026-10-03T12:46:00.935029+00:00",
+  "last_observed_heartbeat": {
+    "epoch": 100,
+    "batch": 341,
+    "total_batches": 381,
+    "global_step": 38060,
+    "loss_E": 0.04194025695323944,
+    "loss_S": 0.21540765464305878,
+    "loss_SA": 0.06840551644563675,
+    "last_saved_epoch": 99,
+    "latest_full": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003/latest_full.pth",
+    "run_id": "463f314c2d0645cfaa3568eae4df0753",
+    "status": "running",
+    "pid": 21263,
+    "updated_at_utc": "2026-10-03T12:44:53.646561+00:00",
+    "elapsed_seconds": 31881.102948212996,
+    "optimizers": {
+      "optimizer_E": [
+        {
+          "lr": 1.0301540625547597e-06,
+          "weight_decay": 0.01,
+          "momentum": null,
+          "betas": [
+            0.9,
+            0.999
+          ]
+        }
+      ],
+      "optimizer_S": [
+        {
+          "lr": 0.00010606127115999717,
+          "weight_decay": 0.0001,
+          "momentum": 0.9,
+          "betas": null
+        }
+      ],
+      "optimizer_SA": [
+        {
+          "lr": 0.02,
+          "weight_decay": 0.0001,
+          "momentum": 0.9,
+          "betas": null
+        }
+      ]
+    },
+    "scalers": {
+      "scaler_E": 34359738368.0,
+      "scaler_S": 34359738368.0,
+      "scaler_SA": 34359738368.0
+    },
+    "gpu_peak_allocated_bytes": 16816599552,
+    "gpu_peak_reserved_bytes": 21049114624
+  },
+  "disk_free_bytes": 43616112640,
+  "warnings": [],
+  "last_checkpoint_epoch": 99,
+  "heartbeat_age_seconds": 7.225825,
+  "child_exit_code": 0,
+  "completed_at_utc": "2026-10-03T12:46:00.934989+00:00"
+}

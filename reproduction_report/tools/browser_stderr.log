@@ -1,0 +1,5 @@
+[19444:17904:1003/215220.602:ERROR:chrome\browser\importer\edge_china_browsers\edge_qqbrowser_importer_utils_win.cc:165] QQBrowser user data path not found.
+[19444:24600:1003/215220.713:ERROR:components\edge_auth\edge_auth_errors.cc:553] EDGE_IDENTITY: Image Fetch FAILED: Error: Primary Error: kAccountImageFetchFailure, Secondary Error: kUnspecified, Platform error: 0, Error string: [empty]
+
+[19444:24600:1003/215221.218:ERROR:chrome\browser\task_manager\providers\fallback_task_provider.cc:126] Every renderer should have at least one task provided by a primary task provider. If a "Renderer" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/40528867.
+186800 bytes written to file C:\Users\Lenovo\Desktop\DTIUIE\reproduction_report\tools\dashboard_preview.png

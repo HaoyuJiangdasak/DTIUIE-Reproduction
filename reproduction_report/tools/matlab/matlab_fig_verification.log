@@ -1,0 +1,5 @@
+[警告: 无法加载工具箱路径缓存 C:\Users\Lenovo\AppData\Local\MathWorks\MATLAB\R2025b\toolbox_cache-25.2.0-24594068-win64.xml。该缓存文件的格式不正确。退出 MATLAB 时将重新生成该文件。] 
+REOPEN_OK matlab_gpu_temperature.fig; axes=1; line_objects=1; max_finite_points=94
+REOPEN_OK matlab_gpu_utilization_memory.fig; axes=2; line_objects=3; max_finite_points=94
+REOPEN_OK matlab_training_validation.fig; axes=4; line_objects=8; max_finite_points=100
+All saved FIGs reopen successfully with editable native objects.

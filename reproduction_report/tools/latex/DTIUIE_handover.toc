@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}先找到文件，不必重复复制大权重}{2}{section.1}%
+\contentsline {section}{\numberline {2}本地重画：先数据，再主图与仪表板}{3}{section.2}%
+\contentsline {section}{\numberline {3}如需再次训练，复用已核对环境与原算法}{4}{section.3}%
+\contentsline {section}{\numberline {4}只需要最佳权重输出时}{4}{section.4}%
+\contentsline {section}{\numberline {5}接手时优先查的坑}{5}{section.5}%
+\contentsline {section}{\numberline {6}监控、凭据与下一步论文对表}{5}{section.6}%

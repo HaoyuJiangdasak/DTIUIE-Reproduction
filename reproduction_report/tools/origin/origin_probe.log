@@ -1,0 +1,95 @@
+{
+  "checked_at_utc": "2026-10-03T13:34:06.689288+00:00",
+  "python_executable": "D:\\miniconda3\\envs\\dtiuie-gpu\\python.exe",
+  "python_version": "3.9.25",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "registry": [
+    {
+      "registry_view": "64-bit",
+      "progid": "Origin.Application",
+      "clsid": "{B0F21977-8AAB-4632-A73D-528B909C5663}",
+      "registry_error": "[WinError 2] 系统找不到指定的文件。"
+    },
+    {
+      "registry_view": "32-bit",
+      "progid": "Origin.Application",
+      "clsid": "{B0F21977-8AAB-4632-A73D-528B909C5663}",
+      "registered_executable": "D:\\origin2026\\Origin2026正式发行版\\Origin64.exe",
+      "registered_executable_exists": false
+    }
+  ],
+  "input_data": {
+    "epochs.csv": {
+      "available": true,
+      "rows": 100,
+      "source": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\data\\epochs.csv",
+      "sha256": "de035d91b030da2513f42de50e55205bcfe6a860d2d1772b12b7640a826909f6",
+      "columns": [
+        "epoch",
+        "loss_E",
+        "loss_S",
+        "loss_SA_mean",
+        "loss_enc_pixel_mean",
+        "loss_enc_feature_mean",
+        "psnr",
+        "ssim",
+        "miou",
+        "dice",
+        "lr_E",
+        "lr_E_used",
+        "lr_S_derived",
+        "lr_SA_code",
+        "epoch_end_utc",
+        "elapsed_hours",
+        "epoch_duration_seconds",
+        "train_duration_seconds",
+        "val_duration_seconds",
+        "iteration_samples",
+        "validation_guidance",
+        "training_total_loss_placeholder",
+        "pixel_accuracy_invalid",
+        "uciqe_placeholder",
+        "uiqm_placeholder"
+      ]
+    },
+    "gpu_samples.csv": {
+      "available": true,
+      "rows": 94,
+      "source": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\data\\gpu_samples.csv",
+      "sha256": "5a7dfc47debde7cbc2470cbacdcff62f2622e064e5e7647d4dd25e961df7fb7a",
+      "columns": [
+        "timestamp_utc",
+        "timestamp_cst",
+        "elapsed_hours",
+        "epoch",
+        "batch",
+        "total_batches",
+        "global_step",
+        "training_status",
+        "connection_ok",
+        "gpu_name",
+        "gpu_util_pct",
+        "vram_used_mib",
+        "vram_total_mib",
+        "temp_c",
+        "power_w",
+        "sample_interval_seconds",
+        "source_file"
+      ],
+      "first_elapsed_hours": 0.008448873360951742,
+      "last_elapsed_hours": 8.98961605668068,
+      "median_interval_seconds": 300.01055908203006,
+      "max_interval_seconds": 1200.0650639534015,
+      "active_training_samples": 92,
+      "plot_policy": "Actual recorded points only; no interpolation or invented continuous telemetry."
+    }
+  },
+  "origin_com_succeeded": false,
+  "origin_project_created": false,
+  "origin_figures_created": false,
+  "status": "blocked_origin_not_available",
+  "exception_type": "com_error",
+  "exception": "(-2147221164, '没有注册类', None, None)",
+  "hresult": -2147221164,
+  "limitation": "Only old Origin COM registration was found; the registered executable is missing. No Origin session, OPJU project, or Origin-rendered image was created. The copied CSVs and origin_builtin.py are ready for a machine with a working Origin installation."
+}

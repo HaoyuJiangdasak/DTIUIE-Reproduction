@@ -1,0 +1,320 @@
+{
+  "status": "PASS",
+  "figure_pdfs": [
+    {
+      "file": "fig01_workflow.pdf",
+      "pages": 1,
+      "text_chars": 545
+    },
+    {
+      "file": "fig02_losses.pdf",
+      "pages": 1,
+      "text_chars": 478
+    },
+    {
+      "file": "fig03_validation.pdf",
+      "pages": 1,
+      "text_chars": 551
+    },
+    {
+      "file": "fig04_lr.pdf",
+      "pages": 1,
+      "text_chars": 340
+    },
+    {
+      "file": "fig05_gpu.pdf",
+      "pages": 1,
+      "text_chars": 272
+    },
+    {
+      "file": "fig06_epoch_runtime.pdf",
+      "pages": 1,
+      "text_chars": 257
+    },
+    {
+      "file": "fig07_timeline.pdf",
+      "pages": 1,
+      "text_chars": 206
+    },
+    {
+      "file": "fig08_data_audit.pdf",
+      "pages": 1,
+      "text_chars": 341
+    },
+    {
+      "file": "fig09_image_comparison.pdf",
+      "pages": 1,
+      "text_chars": 188
+    },
+    {
+      "file": "fig10_step_loss.pdf",
+      "pages": 1,
+      "text_chars": 356
+    }
+  ],
+  "markdown_links": [
+    {
+      "file": "README.md",
+      "target": "index.html",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/复现过程与结果.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/复现交接文档.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "DTIUIE_复现报告.pdf",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "DTIUIE_交接文档.pdf",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "tools/latex/",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "tools/latex/latex_execution.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "figures/",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "figure_catalog.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "tools/matlab/",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "tools/origin/README.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "data/",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "facts.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "data/provenance.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "scripts/",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "evidence/",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "evidence/source_map.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "../cloud_training_results/results-20261003-ebcddb62d624/",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "复现过程与结果.md",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../data/summary.json",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../README.md",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../index.html",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../figures/",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../data/",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../data/provenance.json",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../../cloud_training_results/results-20261003-ebcddb62d624/",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../../cloud_training_results/results-20261003-ebcddb62d624/training_runs/from_scratch_20261003/latest_full.pth",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../../cloud_training_results/results-20261003-ebcddb62d624/checkpoints/model_dtiuie_vgg/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32-best_ssim.pth",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../../underwater_train.py",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../../cloud_reproduction/PATCH_NOTES.md",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../../cloud_reproduction/TRAINING_RUN.md",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../../cloud_reproduction/training_supervisor.py",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../tools/matlab/",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../tools/origin/README.md",
+      "exists": true
+    },
+    {
+      "file": "复现交接文档.md",
+      "target": "../tools/latex/",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../figures/fig01_workflow.png",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../figures/fig08_data_audit.png",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../figures/fig02_losses.png",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../figures/fig10_step_loss.png",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../figures/fig04_lr.png",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../data/provenance.json",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../data/reconstruction_checks.json",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../evidence/source_map.json",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../figures/fig06_epoch_runtime.png",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../figures/fig07_timeline.png",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../figures/fig05_gpu.png",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../figures/fig03_validation.png",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../figures/fig09_image_comparison.png",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../tools/matlab/",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../tools/origin/README.md",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "../DTIUIE_复现报告.pdf",
+      "exists": true
+    },
+    {
+      "file": "复现过程与结果.md",
+      "target": "复现交接文档.md",
+      "exists": true
+    }
+  ],
+  "portable_csv_validation": "PASS",
+  "html_status": "PASS",
+  "matlab_gap_count": 8
+}

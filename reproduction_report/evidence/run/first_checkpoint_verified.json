@@ -1,0 +1,36 @@
+{
+  "validation": "PASS",
+  "saved_epoch": 1,
+  "global_step": 381,
+  "full_optimizer_and_rng_state": true,
+  "parameters_finite": true,
+  "training_checkpoint_loaded_at_start": false,
+  "best_internal_validation": {
+    "ssim": {
+      "score": 0.8244230227036909,
+      "epoch": 1,
+      "metrics": {
+        "psnr": 21.403446072586352,
+        "ssim": 0.8244230227036909,
+        "miou": 0.22873874008655548,
+        "dice": 0.5142824053764343,
+        "acc": 0.4015655517578125,
+        "uciqe": 0,
+        "uiqm": 0
+      }
+    },
+    "miou": {
+      "score": 0.22873874008655548,
+      "epoch": 1,
+      "metrics": {
+        "psnr": 21.403446072586352,
+        "ssim": 0.8244230227036909,
+        "miou": 0.22873874008655548,
+        "dice": 0.5142824053764343,
+        "acc": 0.4015655517578125,
+        "uciqe": 0,
+        "uiqm": 0
+      }
+    }
+  }
+}

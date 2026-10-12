@@ -1,0 +1,55 @@
+# ============================================================
+#  DTIUIE-Reproduction  .gitignore
+# ------------------------------------------------------------
+#  大文件（>100 MB）无法进入 GitHub 主分支 —— 这是服务器硬限制，
+#  不是配置问题。它们统一走百度网盘，清单见 网盘上传清单.md
+# ============================================================
+
+# ---- 预训练权重与训练检查点（413 MB ~ 732 MB）----
+checkpoints/
+*.pth
+*.pth.tar
+cloud_training_results/*.tar.gz
+cloud_training_results/*.sha256
+cloud_training_results/checkpoint_backups/
+cloud_training_results/results-*/training_runs/*.pth
+cloud_training_results/results-*/checkpoints/
+cloud_training_results/results-*/results/
+
+# ---- 数据集（527 MB / 4906 个文件，作者已提供网盘原包）----
+dataset/
+_原始下载备份/
+
+# ---- 报告打包副本（内容与 reproduction_report/ 完全重复）----
+DTIUIE_reproduction_report_20261003.zip
+DTIUIE_reproduction_report_20261003.zip.sha256
+
+# ---- Python 缓存与构建产物 ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- 训练中间产物 ----
+tensorboard_logs/
+results/
+
+# ---- 编辑器 / 操作系统 ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 本地临时文件 ----
+*.tmp
+*.bak
+gcm_trace.log
+gcm-diagnose.log

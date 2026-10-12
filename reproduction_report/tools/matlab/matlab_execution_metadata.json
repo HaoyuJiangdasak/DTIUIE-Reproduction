@@ -1,0 +1,18 @@
+{
+  "matlab_version": "25.2.0.3177638 (R2025b) Update 5",
+  "epoch_rows": 100,
+  "gpu_rows": 94,
+  "best_epoch_marker": 71,
+  "warmup_epoch_marker": 10,
+  "font_name": "Microsoft YaHei UI",
+  "median_gpu_sample_interval_minutes": 5.0001759847005012,
+  "gpu_observation_gap_threshold_minutes": 7,
+  "gpu_observation_gap_count": 8,
+  "training_completion_marker_elapsed_hours": 8.8704421388342354,
+  "training_completion_marker_source": "data/summary.json:elapsed_seconds_completed_record / 3600",
+  "training_completion_marker_utc": "2026-10-03T12:45:46.135318+00:00",
+  "figure_data_source": "CSV extracted from recorded run logs; no new model evaluation",
+  "png_dpi": 300,
+  "pdf_content_type": "vector",
+  "finished_local": "2026-10-03 22:00:09"
+}

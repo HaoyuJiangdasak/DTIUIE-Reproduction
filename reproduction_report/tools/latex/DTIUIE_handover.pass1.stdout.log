@@ -1,0 +1,116 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./DTIUIE_handover.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/ctex/ctexart.cls
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
+) (d:/Program Files/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-xetex.d
+ef))
+Document Class: ctexart 2022/07/14 v2.5.10 Chinese adapter for class article (C
+TEX)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/ctex/ctexhook.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/ctex/ctexpatch.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/base/fix-cm.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/base/ts1enc.def))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/ctex/config/ctexopts.cfg)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/base/size11.clo))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/ctex/engine/ctex-engine-xet
+ex.def (d:/Program Files/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/l3packages/xtemplate/xtempl
+ate.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.st
+y)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(d:/Program Files/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg)))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg)
+)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chi
+nese-article.def
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.
+cfg))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-w
+indows.def))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex.cfg)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty)))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/float/float.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/tools/array.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/fvextra/fvextra.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/lineno/lineno.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))))
+ (d:/Program Files/texlive/2025/texmf-dist/tex/latex/xurl/xurl.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/url/url.sty))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys
+.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlest
+ring.sty))
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+)) (d:/Program Files/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/hyperref/hxetex.def
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfileche
+ck.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecount
+er.sty)))
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty))
+(./DTIUIE_handover.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(d:/Program Files/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(./DTIUIE_handover.out) (./DTIUIE_handover.out) (./DTIUIE_handover.toc)
+[1]
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+[]\TU/SimSun(0)/m/n/10.95 结 果 归 档 为 \TU/lmr/m/n/10.95 1,966,805,588 \TU/SimSun(
+0)/m/n/10.95 字 节，| \TU/lmr/m/n/10.95 SHA256\TU/SimSun(0)/m/n/10.95 ：| \TU/Conso
+las(0)/m/n/10.95 ebcddb62d62408689e06aca12e8f5f2f8892
+
+[2]
+[3]
+[4]
+[5]
+[6] (./DTIUIE_handover.aux) )
+(see the transcript file for additional information)
+Output written on DTIUIE_handover.pdf (6 pages).
+Transcript written on DTIUIE_handover.log.

@@ -1,0 +1,8 @@
+# Separate analysis environment; do not upgrade the completed training environment.
+numpy
+pandas
+matplotlib
+Pillow
+plotly
+tensorboard
+pymupdf

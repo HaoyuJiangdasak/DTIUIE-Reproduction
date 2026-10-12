@@ -1,0 +1,136 @@
+\documentclass[UTF8,11pt,a4paper,fontset=windows]{ctexart}
+\usepackage[margin=22mm]{geometry}
+\usepackage{graphicx,float,booktabs,longtable,array,enumitem,fvextra,xurl,hyperref,fancyhdr,caption}
+\setmonofont{Consolas}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\setlist{itemsep=2pt,topsep=3pt,leftmargin=2em}
+\setlength{\parskip}{4pt}
+\setlength{\tabcolsep}{3pt}
+\setlength{\headheight}{16pt}
+\setlength{\emergencystretch}{3em}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{DTIUIE复现档案}\fancyhead[R]{官方代码默认配置}\fancyfoot[C]{\thepage}
+\title{监控、凭据与下一步论文对表}
+\author{从真实训练日志、TensorBoard与GPU巡检重建}
+\date{训练日期：2026年10月3日}
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+交接日期：2026-10-03。正式目标为官方代码优先的从头训练：100 epochs、batch=4、256×256、warmup=10，已完成 38,100 个 batch 更新，总耗时 8 小时 52 分钟 14 秒。最佳 SSIM 和 mIoU 均为 epoch 71；不是加载发布权重后只跑推理。训练及资源证据见 复现过程与结果（\texttt{复现过程与结果.\allowbreak{}md}） 和 事实汇总（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}data/\allowbreak{}summ\allowbreak{}ary.\allowbreak{}json}）。
+
+\section{先找到文件，不必重复复制大权重}
+
+\begin{longtable}{*{2}{>{\raggedright\arraybackslash}p{0.4550\linewidth}}}
+\toprule
+需要接手的内容 & 位置 \\
+\midrule
+本报告与离线可视化 & README（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}README.\allowbreak{}md\allowbreak{}}）、仪表板（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}index.\allowbreak{}htm\allowbreak{}l}）、主图（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}figures/\allowbreak{}}） \\
+可重建CSV及源文件哈希 & data（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}data/\allowbreak{}}）、provenance.json（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}data/\allowbreak{}prov\allowbreak{}enance.\allowbreak{}json}） \\
+原始完整结果包解压目录 & results-20261003-ebcddb62d624（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}.\allowbreak{}.\allowbreak{}/\allowbreak{}cloud\_\allowbreak{}training\_\allowbreak{}res\allowbreak{}ults/\allowbreak{}results\allowbreak{}-\allowbreak{}20261003-\allowbreak{}eb\allowbreak{}cddb62d624/\allowbreak{}}） \\
+最终完整恢复断点 & latest\_full.pth（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}.\allowbreak{}.\allowbreak{}/\allowbreak{}cloud\_\allowbreak{}training\_\allowbreak{}res\allowbreak{}ults/\allowbreak{}results\allowbreak{}-\allowbreak{}20261003-\allowbreak{}eb\allowbreak{}cddb62d624/\allowbreak{}t\allowbreak{}raining\_\allowbreak{}runs\allowbreak{}/\allowbreak{}from\_\allowbreak{}scratc\allowbreak{}h\_\allowbreak{}20261003/\allowbreak{}l\allowbreak{}atest\_\allowbreak{}full.\allowbreak{}p\allowbreak{}th}） \\
+最佳71轮权重 & best\_ssim.pth（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}.\allowbreak{}.\allowbreak{}/\allowbreak{}cloud\_\allowbreak{}training\_\allowbreak{}res\allowbreak{}ults/\allowbreak{}results\allowbreak{}-\allowbreak{}20261003-\allowbreak{}eb\allowbreak{}cddb62d624/\allowbreak{}c\allowbreak{}heckpoints/\allowbreak{}m\allowbreak{}odel\_\allowbreak{}dtiuie\_\allowbreak{}vgg/\allowbreak{}model\_\allowbreak{}dt\allowbreak{}iuie-\allowbreak{}vgg16-\allowbreak{}T\allowbreak{}IUIED-\allowbreak{}lr=\allowbreak{}0.\allowbreak{}0\allowbreak{}001-\allowbreak{}wd=\allowbreak{}0.\allowbreak{}001\allowbreak{}-\allowbreak{}bs=\allowbreak{}4-\allowbreak{}10-\allowbreak{}03-\allowbreak{}2026-\allowbreak{}11-\allowbreak{}53-\allowbreak{}3\allowbreak{}2-\allowbreak{}best\_\allowbreak{}ssim.\allowbreak{}pth}） \\
+原源码及运维差异 & underwater\_train.py（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}.\allowbreak{}.\allowbreak{}/\allowbreak{}underw\allowbreak{}ater\_\allowbreak{}train.\allowbreak{}p\allowbreak{}y}）、PATCH\_NOTES.md（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}.\allowbreak{}.\allowbreak{}/\allowbreak{}cloud\_\allowbreak{}reproduction\allowbreak{}/\allowbreak{}PATCH\_\allowbreak{}NOTES\allowbreak{}.\allowbreak{}md}） \\
+训练参数与命令来源 & TRAINING\_RUN.md（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}.\allowbreak{}.\allowbreak{}/\allowbreak{}cloud\_\allowbreak{}reproduction\allowbreak{}/\allowbreak{}TRAINING\_\allowbreak{}RU\allowbreak{}N.\allowbreak{}md}）、training\_supervisor.py（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}.\allowbreak{}.\allowbreak{}/\allowbreak{}cloud\_\allowbreak{}reproduction\allowbreak{}/\allowbreak{}training\_\allowbreak{}su\allowbreak{}pervisor.\allowbreak{}py}） \\
+已导出图像和manifest & 解压目录内 \texttt{outputs/\allowbreak{}trai\allowbreak{}ned\_\allowbreak{}*\_\allowbreak{}model\_\allowbreak{}SA\_\allowbreak{}20261003/\allowbreak{}} \\
+软件专项产物 & MATLAB（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}tools/\allowbreak{}mat\allowbreak{}lab/\allowbreak{}}）、Origin说明（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}tools/\allowbreak{}ori\allowbreak{}gin/\allowbreak{}README.\allowbreak{}m\allowbreak{}d}）、LaTeX（\texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}tools/\allowbreak{}lat\allowbreak{}ex/\allowbreak{}}） \\
+\bottomrule
+\end{longtable}
+
+结果归档为 1,966,805,588 字节，SHA256：\texttt{ebcddb62d624\allowbreak{}08689e06aca1\allowbreak{}2e8f5f2f8892\allowbreak{}290aaeded000\allowbreak{}4f4b8afc1c4a\allowbreak{}04a2}。报告只引用大文件，不再次拷贝约 2 GB 归档或多个完整断点。便携报告可独立看图；链接到原训练资产的功能需要保留原项目目录。
+
+报告的 \texttt{evidence/\allowbreak{}} 另含105个已核验来源文件的副本：原始训练日志、TensorBoard event、94次巡检、完成和参数记录，以及所展示样例与官方代码。\texttt{evidence/\allowbreak{}sou\allowbreak{}rce\_\allowbreak{}map.\allowbreak{}json\allowbreak{}} 将原路径映射到便携路径并记录SHA256，便于导师从曲线追到原始日志。它不包含登录凭据或大权重。
+
+最小接收检查包括四件事：完整结束标记记载第一百轮与三万八千一百步；三套输出的 manifest 均完成；源日志与断点可读且哈希对应；数据重建检查全部通过。最终权重和完整断点不是同一种文件，后者体积大是因为包含恢复训练状态。交接时不要把普通最佳模型重命名成完整断点，也不要只保留图片而删除唯一原始运行记录。
+
+\section{本地重画：先数据，再主图与仪表板}
+
+现有 Python 环境直接运行；以下为重建命令，不启动训练，也不连接云端：
+
+\begin{Verbatim}[breaklines=true,breakanywhere=true,fontsize=\scriptsize,frame=single]
+$reportPath = 'C:\Users\Lenovo\Desktop\DTIUIE\reproduction_report'
+& 'D:\miniconda3\envs\dtiuie\python.exe' "$reportPath\scripts\extract_run_data.py"
+& 'D:\miniconda3\envs\dtiuie\python.exe' "$reportPath\scripts\plot_report.py"
+& 'C:\Users\Lenovo\AppData\Local\Programs\Python\Python314\python.exe' "$reportPath\scripts\build_dashboard.py"
+\end{Verbatim}
+
+数据脚本读取完整 TensorBoard scalar、训练日志和 \texttt{autodl-\allowbreak{}ssh/\allowbreak{}m\allowbreak{}onitor/\allowbreak{}histo\allowbreak{}ry-\allowbreak{}*.\allowbreak{}json}。需保留原来源路径；换机器时用提取器 \texttt{-\allowbreak{}-\allowbreak{}project}、\texttt{-\allowbreak{}-\allowbreak{}monitor} 参数指定实际位置。\texttt{epochs.\allowbreak{}csv}、\texttt{iterations.\allowbreak{}c\allowbreak{}sv}、\texttt{gpu\_\allowbreak{}samples.\allowbreak{}csv} 可直接用于其他软件。\texttt{power\_\allowbreak{}w} 空白是未测，不可填零后画功率；缺口不可插值成连续实测。
+
+若只拿到便携报告包，可以运行 \texttt{extract\_\allowbreak{}run\_\allowbreak{}data.\allowbreak{}py -\allowbreak{}-\allowbreak{}po\allowbreak{}rtable} 从包内 \texttt{evidence/\allowbreak{}} 重建同样的CSV，不必拥有原本机目录。静态图脚本对示例图和完成记录也提供包内来源回退；MATLAB直接读CSV，LaTeX图像采用相对路径。单独环境需要的库见 \texttt{scripts/\allowbreak{}requ\allowbreak{}irements-\allowbreak{}vis\allowbreak{}ualization.\allowbreak{}t\allowbreak{}xt}。
+
+仪表板使用现有系统 Python 3.14 的 Plotly，训练分析绘图使用现有 dtiuie 环境，二者不要混用后再因缺包改训练环境。网页已内嵌图像与脚本，直接本地打开即可；复制到另一台机器仍可浏览。图表中的悬停适合查看单轮或单次快照，静态 PDF/SVG 适合插入汇报材料，CSV 用于自行重算和另画。换电脑重建时先检查 Python 依赖与原日志位置，不能只搬一张图片后声称证据也已经移交。
+
+MATLAB 已实际运行。重画命令：
+
+\begin{Verbatim}[breaklines=true,breakanywhere=true,fontsize=\scriptsize,frame=single]
+powershell -NoProfile -ExecutionPolicy Bypass -File 'C:\Users\Lenovo\Desktop\DTIUIE\reproduction_report\scripts\run_matlab.ps1'
+\end{Verbatim}
+
+可编辑 FIG、MAT 和调用日志在 \texttt{tools/\allowbreak{}matlab\allowbreak{}}。MATLAB 需要本机正常许可。Origin 尚不可用：COM 类未注册且旧路径缺少 Origin64.exe；恢复有效安装及许可后，可运行 \texttt{scripts/\allowbreak{}plot\allowbreak{}\_\allowbreak{}origin.\allowbreak{}py} 或在一份新建 Origin 会话内运行 \texttt{tools/\allowbreak{}origin\allowbreak{}/\allowbreak{}origin\_\allowbreak{}buil\allowbreak{}tin.\allowbreak{}py}。当前仅验证脚本语法与公开接口，不把它称为成功软件运行。PDF 用本机 TeX Live 2025 的 XeLaTeX 双遍编译，成功记录保存在 \texttt{tools/\allowbreak{}latex/\allowbreak{}latex\_\allowbreak{}execut\allowbreak{}ion.\allowbreak{}json}；重建可用系统 Python 执行 \texttt{scripts/\allowbreak{}buil\allowbreak{}d\_\allowbreak{}latex.\allowbreak{}py}。
+
+复核顺序建议固定为：读取事实汇总，核对数据重建检查是否通过，打开训练曲线与资源曲线，再查看最佳检查点 manifest。不要先运行新的训练覆盖旧目录。来源哈希用于识别同一文件，协议说明用于判断同一指标是否可比，二者都不能省略。若重新生成图表时计数变化，应先查来源增删或重复 JSON，再查绘图代码。
+
+\section{如需再次训练，复用已核对环境与原算法}
+
+云端项目原位置为 \texttt{/\allowbreak{}root/\allowbreak{}autodl\allowbreak{}-\allowbreak{}tmp/\allowbreak{}DTIUIE}，环境为 \texttt{/\allowbreak{}root/\allowbreak{}autodl\allowbreak{}-\allowbreak{}tmp/\allowbreak{}envs/\allowbreak{}dt\allowbreak{}iuie-\allowbreak{}legacy}。先确认新实例 GPU 与数据盘，再运行实际 CUDA 卷积及两个训练阶段预检。旧任务已完成，不要把 \texttt{training\_\allowbreak{}sup\allowbreak{}ervisor.\allowbreak{}py} 硬编码的已完成目录当作一次新训练；重新跑应使用空的新 run 目录。
+
+下面保留正式100轮训练的核心命令，示例使用新的输出名：
+
+\begin{Verbatim}[breaklines=true,breakanywhere=true,fontsize=\scriptsize,frame=single]
+cd /root/autodl-tmp/DTIUIE
+OMP_NUM_THREADS=8 MKL_NUM_THREADS=8 \
+/root/autodl-tmp/envs/dtiuie-legacy/bin/python -u -B \
+  cloud_reproduction/underwater_train_monitored.py \
+  --database TIUIED --model_E model_dtiuie --model_S vgg16 \
+  --batch_size 4 --epochs 100 --crop_size 256 --warmup_epochs 10 \
+  --run_dir training_runs/rerun_author_default --cudnn_benchmark
+\end{Verbatim}
+
+长任务需通过独立 supervisor 或可靠后台进程运行，不能只依赖当前 SSH 终端。正式监督方案每分钟检查心跳与磁盘、每轮保存完整断点；数值或代码异常应停下调查，不盲目重启。保持 float32、原 DataLoader 与原三网络更新顺序，不能为“提高性能”擅自改 AMP、batch 或损失。
+
+完整恢复使用本运维副本的 \texttt{-\allowbreak{}-\allowbreak{}resume\_\allowbreak{}ful\allowbreak{}l}，不能用原作者普通最佳权重替代：
+
+\begin{Verbatim}[breaklines=true,breakanywhere=true,fontsize=\scriptsize,frame=single]
+/root/autodl-tmp/envs/dtiuie-legacy/bin/python -u -B \
+  cloud_reproduction/underwater_train_monitored.py \
+  --resume_full training_runs/from_scratch_20261003/latest_full.pth \
+  --run_dir training_runs/recovered_author_default --cudnn_benchmark
+\end{Verbatim}
+
+中途断点从下一轮恢复；此处给出的最终断点已是 epoch 100，只会进入原末尾处理，不再执行100轮训练。它包含三模型、优化器、调度器、scaler、随机状态与最佳指标。当前云端未发生恢复；已有小模型测试验证恢复的下一次更新。新实例应先把可信断点上传，并在独立项目副本中恢复，避免覆盖旧结果。
+
+\section{只需要最佳权重输出时}
+
+云端最佳文件路径和可信 SHA256 必须成对使用：
+
+\begin{Verbatim}[breaklines=true,breakanywhere=true,fontsize=\scriptsize,frame=single]
+cd /root/autodl-tmp/DTIUIE
+/root/autodl-tmp/envs/dtiuie-legacy/bin/python \
+  cloud_reproduction/infer_trained_checkpoint.py \
+  --checkpoint checkpoints/model_dtiuie_vgg/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32-best_ssim.pth \
+  --trusted-checkpoint-sha256 e1e2d13b09fd69965679aa26ab4785e7ef34a372851beeef8c11730c352c6292 \
+  --guidance model_SA --device cuda:0 --output-dir outputs/recheck_best71_model_SA
+\end{Verbatim}
+
+输出目录必须为空或不存在；manifest 应为 complete、完成110张、JPEG/PNG各110张。选择 \texttt{model\_\allowbreak{}SA} 对齐本次逐轮验证；使用 \texttt{model\_\allowbreak{}S} 属于另一个明确记录的协议。输入 RGB [0,1]，保留官方两次 bicubic resize 和网络内归一化，输出固定256×256，不额外做 ImageNet 标准化。不要读 JPEG 压缩结果后声称重算了训练时浮点 PSNR/SSIM。
+
+如要增加新的质量指标，建议另建分析目录，记录输入来自浮点网络输出还是磁盘图像、通道顺序、数值范围及参考图 resize 规则，再保存逐图数值与平均方式。若修正像素准确率或处理异常 mask，应将代码和数据版本单独编号，说明与本次原始基线的差别。已有训练不能倒推出从未计算过的指标，也不能用后加的评价器覆盖原日志中的值。
+
+\section{接手时优先查的坑}
+
+\begin{enumerate}
+\item \textbf{指标协议先行。} pixAcc 无效，UIQM/UCIQE 和部分总 loss 为占位0；不要汇入论文表格。逐轮 SA 与末尾 S 的指标分别解释。
+\item \textbf{配置看真实状态。} E 实际 weight decay=0.01，S 三项 CE 直接相加，SA lr 恒定；随机种子调用未生效。先保存这些事实，再考虑任何另立版本的修正实验。
+\item \textbf{数据对齐。} 37 张训练 mask 尺寸差异源于官方 ZIP，直接 resize 仍可能错位；新实验修正时另存数据版本，不能覆盖此次证据。
+\item \textbf{检查点和入口。} 旧 Torch BINFLOAT 错误需限定可信哈希后完整加载；原测试入口有不存在的 \texttt{TIUIED} 类与参数覆盖问题，使用已核对的新入口。原 \texttt{-\allowbreak{}-\allowbreak{}resume} 不完整，\texttt{-\allowbreak{}-\allowbreak{}save\_\allowbreak{}iter\_\allowbreak{}checkpoint} 分支也有失效参数。
+\item \textbf{显存和网络。} warmup 能跑不等于 TDP 能跑；后阶段要真实预检。大 wheel 下载使用响应范围和哈希验证，VGG 初始化缓存亦需校验。
+\end{enumerate}
+
+\section{监控、凭据与下一步论文对表}
+
+本机任务 \texttt{DTIUIE-\allowbreak{}AutoD\allowbreak{}L-\allowbreak{}Monitor-\allowbreak{}20\allowbreak{}261003} 已在结果回收后禁用，当前报告生成无需保持云端连接。历史巡检与9次备份记录保留。密码仅位于当前 Windows 用户 DPAPI 加密文件 \texttt{C:\allowbreak{}\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}Len\allowbreak{}ovo\textbackslash{}\allowbreak{}autodl-\allowbreak{}s\allowbreak{}sh\textbackslash{}\allowbreak{}credentia\allowbreak{}ls\textbackslash{}\allowbreak{}autodl-\allowbreak{}we\allowbreak{}stc-\allowbreak{}18824.\allowbreak{}xm\allowbreak{}l}；该文件不作为便携登录资料，报告或分享包不得包含 credentials、私钥或明文密码。新实例须更新连接信息和受信任主机密钥。
+
+再次启动监控前应更换目标 run 名，并确认不会误读旧完成标记或重复下载旧归档。观察缺口不等于训练停止；先看心跳是否更新、完成步数是否前进以及进程状态，再查 GPU。数值失败要保留最近完整断点及异常栈，连接失败则检查实例、端口和主机密钥，不能混为一谈。分享给导师的轻量材料无需这些远程认证文件。
+
+若导师要求“复现论文表 II”，下一步需取得 SUIM/LIACi 数据划分，按增强后数据分别重新训练 UNet、DeepLabV3、FPN、DPT，并统一分割指标、检查点选择及输入尺度。表 III/IV 另需 RUOD/UIIS，表 V 另需 SUIM-E/UIEB 与正式质量指标。建议保留本次作为官方代码基线，另做多个实际固定种子的训练及代码差异对照，才能报告均值与波动。不得用内部 SA 的 mIoU 直接替代这些独立下游实验。
+\end{document}

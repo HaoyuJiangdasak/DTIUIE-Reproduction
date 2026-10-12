@@ -1,0 +1,14 @@
+[警告: 无法加载工具箱路径缓存 C:\Users\Lenovo\AppData\Local\MathWorks\MATLAB\R2025b\toolbox_cache-25.2.0-24594068-win64.xml。该缓存文件的格式不正确。退出 MATLAB 时将重新生成该文件。] 
+DTIUIE MATLAB visualization started: 2026-10-03 21:59:51
+MATLAB: 25.2.0.3177638 (R2025b) Update 5
+MATLAB license available: 1
+Report root: C:\Users\Lenovo\Desktop\DTIUIE\reproduction_report
+Training completion marker: 8.8704421388 h (summary completed record)
+Recorded epochs: 100; GPU samples: 94
+Figure font: Microsoft YaHei UI
+Exported matlab_training_validation.{fig,png,pdf}
+GPU median sampling cadence: 5.00 min; gaps > 7.00 min: 8
+Exported matlab_gpu_utilization_memory.{fig,png,pdf}
+Exported matlab_gpu_temperature.{fig,png,pdf}
+Power data absent: no power curve produced.
+DTIUIE MATLAB visualization finished successfully.

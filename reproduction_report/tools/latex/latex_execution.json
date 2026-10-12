@@ -1,0 +1,20 @@
+[
+  {
+    "markdown": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\docs\\复现过程与结果.md",
+    "tex": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\tools\\latex\\DTIUIE_reproduction_report.tex",
+    "pdf": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\tools\\latex\\DTIUIE_reproduction_report.pdf",
+    "public_pdf": "DTIUIE_复现报告.pdf",
+    "engine": "D:\\Program Files\\texlive\\2025\\bin\\windows\\xelatex.exe",
+    "passes": 2,
+    "exit_code": 0
+  },
+  {
+    "markdown": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\docs\\复现交接文档.md",
+    "tex": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\tools\\latex\\DTIUIE_handover.tex",
+    "pdf": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\tools\\latex\\DTIUIE_handover.pdf",
+    "public_pdf": "DTIUIE_交接文档.pdf",
+    "engine": "D:\\Program Files\\texlive\\2025\\bin\\windows\\xelatex.exe",
+    "passes": 2,
+    "exit_code": 0
+  }
+]

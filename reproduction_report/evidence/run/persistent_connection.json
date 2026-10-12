@@ -1,0 +1,13 @@
+{
+  "connected": true,
+  "host": "connect.westc.seetacloud.com",
+  "port": 18824,
+  "connection_count": 1,
+  "supervisor_status": "complete",
+  "epoch": 100,
+  "batch": 381,
+  "last_saved_epoch": 100,
+  "warnings": [],
+  "updated_at_utc": "2026-10-03T12:49:18.085050+00:00",
+  "local_pid": 8224
+}

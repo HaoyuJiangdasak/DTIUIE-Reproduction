@@ -1,0 +1,884 @@
+{
+  "schema_version": 1,
+  "source_checked_date": "2026-10-02",
+  "saved_at": "2026-10-02T23:38:51+08:00",
+  "source_root": "C:\\Users\\Lenovo\\Desktop\\DTIUIE",
+  "method": {
+    "read_only_original_assets": true,
+    "all_dataset_images_decoded_with_pillow": true,
+    "mask_histograms_computed_with_numpy": true,
+    "checkpoint_inspected_with_zipfile_and_pickletools_without_unpickling": true,
+    "mismatch_inheritance_verified_against_original_zip_count": 37
+  },
+  "dataset": {
+    "splits": {
+      "test": {
+        "directories": {
+          "images": {
+            "relative_path": "dataset/test/images",
+            "file_count": 110,
+            "unique_stem_count": 110,
+            "bytes": 10172592,
+            "mode_counts": {
+              "RGB": 110
+            },
+            "extension_counts": {
+              ".jpg": 110
+            },
+            "all_files_decoded_successfully": true,
+            "dimension_variants": 8,
+            "width_min": 416,
+            "width_max": 1906,
+            "height_min": 360,
+            "height_max": 1080
+          },
+          "reference": {
+            "relative_path": "dataset/test/reference",
+            "file_count": 110,
+            "unique_stem_count": 110,
+            "bytes": 22682963,
+            "mode_counts": {
+              "RGB": 110
+            },
+            "extension_counts": {
+              ".jpg": 110
+            },
+            "all_files_decoded_successfully": true,
+            "dimension_variants": 8,
+            "width_min": 416,
+            "width_max": 1906,
+            "height_min": 360,
+            "height_max": 1080
+          },
+          "masks_png": {
+            "relative_path": "dataset/test/masks_png",
+            "file_count": 110,
+            "unique_stem_count": 110,
+            "bytes": 465012,
+            "mode_counts": {
+              "L": 110
+            },
+            "extension_counts": {
+              ".png": 110
+            },
+            "all_files_decoded_successfully": true,
+            "dimension_variants": 8,
+            "width_min": 416,
+            "width_max": 1906,
+            "height_min": 360,
+            "height_max": 1080,
+            "dtype": "uint8",
+            "label_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "invalid_label_count": 0,
+            "pixel_counts_by_label": {
+              "0": 16478278,
+              "1": 1454049,
+              "2": 1215617,
+              "3": 2871016,
+              "4": 354299,
+              "5": 7674390,
+              "6": 2666704,
+              "7": 6699903
+            }
+          }
+        },
+        "pairing": {
+          "missing_reference_stems": [],
+          "missing_mask_stems": [],
+          "extra_reference_stems": [],
+          "extra_mask_stems": [],
+          "sorted_order_pair_mismatches": 0,
+          "image_reference_dimension_mismatches": 0,
+          "image_mask_dimension_mismatches": 0
+        },
+        "size_status": "All image/reference/mask dimensions match"
+      },
+      "trainval": {
+        "directories": {
+          "images": {
+            "relative_path": "dataset/trainval/images",
+            "file_count": 1525,
+            "unique_stem_count": 1525,
+            "bytes": 162890454,
+            "mode_counts": {
+              "RGB": 1525
+            },
+            "extension_counts": {
+              ".jpg": 1525
+            },
+            "all_files_decoded_successfully": true,
+            "dimension_variants": 13,
+            "width_min": 416,
+            "width_max": 1906,
+            "height_min": 360,
+            "height_max": 1080
+          },
+          "reference": {
+            "relative_path": "dataset/trainval/reference",
+            "file_count": 1525,
+            "unique_stem_count": 1525,
+            "bytes": 337801709,
+            "mode_counts": {
+              "RGB": 1525
+            },
+            "extension_counts": {
+              ".jpg": 1525
+            },
+            "all_files_decoded_successfully": true,
+            "dimension_variants": 13,
+            "width_min": 416,
+            "width_max": 1906,
+            "height_min": 360,
+            "height_max": 1080
+          },
+          "masks_png": {
+            "relative_path": "dataset/trainval/masks_png",
+            "file_count": 1525,
+            "unique_stem_count": 1525,
+            "bytes": 6710592,
+            "mode_counts": {
+              "L": 1525
+            },
+            "extension_counts": {
+              ".png": 1525
+            },
+            "all_files_decoded_successfully": true,
+            "dimension_variants": 13,
+            "width_min": 416,
+            "width_max": 1906,
+            "height_min": 360,
+            "height_max": 1080,
+            "dtype": "uint8",
+            "label_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "invalid_label_count": 0,
+            "pixel_counts_by_label": {
+              "0": 189688979,
+              "1": 12313599,
+              "2": 11940788,
+              "3": 37353994,
+              "4": 2917692,
+              "5": 186100654,
+              "6": 39309599,
+              "7": 78415339
+            }
+          }
+        },
+        "pairing": {
+          "missing_reference_stems": [],
+          "missing_mask_stems": [],
+          "extra_reference_stems": [],
+          "extra_mask_stems": [],
+          "sorted_order_pair_mismatches": 0,
+          "image_reference_dimension_mismatches": 0,
+          "image_mask_dimension_mismatches": 37
+        },
+        "size_status": "37 masks have 55 additional pixels in height"
+      }
+    },
+    "total_image_reference_mask_files": 4905,
+    "total_directory_bytes_including_converter_script": 540725475,
+    "training_mask_size_mismatches": [
+      {
+        "stem": "f_r_1058_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1068_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1069_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1070_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1133_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1142_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1151_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1154_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1214_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1233_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1259_",
+        "image_size_wh": [
+          910,
+          435
+        ],
+        "reference_size_wh": [
+          910,
+          435
+        ],
+        "mask_size_wh": [
+          910,
+          490
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1289_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1290_",
+        "image_size_wh": [
+          910,
+          435
+        ],
+        "reference_size_wh": [
+          910,
+          435
+        ],
+        "mask_size_wh": [
+          910,
+          490
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1302_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1318_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1394_",
+        "image_size_wh": [
+          910,
+          435
+        ],
+        "reference_size_wh": [
+          910,
+          435
+        ],
+        "mask_size_wh": [
+          910,
+          490
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1424_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1491_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1515_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1570_",
+        "image_size_wh": [
+          910,
+          435
+        ],
+        "reference_size_wh": [
+          910,
+          435
+        ],
+        "mask_size_wh": [
+          910,
+          490
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1779_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1812_",
+        "image_size_wh": [
+          910,
+          435
+        ],
+        "reference_size_wh": [
+          910,
+          435
+        ],
+        "mask_size_wh": [
+          910,
+          490
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1816_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1866_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_1879_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_401_",
+        "image_size_wh": [
+          910,
+          435
+        ],
+        "reference_size_wh": [
+          910,
+          435
+        ],
+        "mask_size_wh": [
+          910,
+          490
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_829_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_921_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_934_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_968_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "f_r_991_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "w_r_1_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "w_r_24_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "w_r_25_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "w_r_27_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "w_r_47_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      },
+      {
+        "stem": "w_r_7_",
+        "image_size_wh": [
+          590,
+          375
+        ],
+        "reference_size_wh": [
+          590,
+          375
+        ],
+        "mask_size_wh": [
+          590,
+          430
+        ],
+        "also_present_in_original_download_zip": true
+      }
+    ],
+    "training_mask_warning": "Paired_Set independently resizes image, reference and mask to 256 x 256; these 37 source dimension mismatches can misalign semantic supervision. Existing-weight inference and evaluation on the consistent 110-image test split are unaffected. Original assets were not corrected."
+  },
+  "checkpoint": {
+    "relative_path": "checkpoints/dtiuie_ckpt.pth",
+    "bytes": 432055901,
+    "sha256": "e9449842c0f81211f72bceacba63a7d1d2c085c920e00901e26e2e40dea0c7b6",
+    "epoch": 28,
+    "state_dict_keys_confirmed": [
+      "model_E",
+      "model_S",
+      "model_SA"
+    ],
+    "zip_archive": true,
+    "tensor_key_shape_strict_loading_in_this_audit": false,
+    "note": "Checkpoint metadata was safely inspected; strict loading assertions in the handoff document were not rerun by this data audit."
+  },
+  "smoke_outputs": {
+    "relative_directory": "outputs/DTIUIE_smoke",
+    "count": 4,
+    "all_decoded_successfully": true,
+    "mode": "RGB",
+    "dimensions_wh": [
+      256,
+      256
+    ],
+    "bytes": 52242,
+    "filenames": [
+      "d_r_122_.jpg",
+      "d_r_129_.jpg",
+      "d_r_144_.jpg",
+      "d_r_166_.jpg"
+    ],
+    "full_110_image_inference_complete": false
+  },
+  "vgg_cache": {
+    "expected_filename": "vgg16_bn-6c64b313.pth",
+    "default_cache_path": "C:\\Users\\Lenovo\\.cache\\torch\\hub\\checkpoints",
+    "default_cache_exists": false,
+    "torch_home_env_set": false,
+    "xdg_cache_home_env_set": false,
+    "matching_vgg16_bn_weights_found_in_checked_locations": false,
+    "checked_locations": [
+      "C:\\Users\\Lenovo\\.cache",
+      "C:\\Users\\Lenovo\\Desktop\\DTIUIE",
+      "D:\\miniconda3\\pkgs",
+      "D:\\miniconda3\\envs\\dtiuie",
+      "D:\\miniconda3\\envs\\dtiuie-gpu"
+    ],
+    "lpips_vgg_weights_are_not_vgg16_bn_backbone_weights": true,
+    "inference_option": "Use pretrained=False only when the supplied checkpoint fully and strictly overwrites the segmentation model; otherwise pretrained=True needs the VGG16-BN download."
+  },
+  "package_sizes_uncompressed_bytes": {
+    "source_nonasset_snapshot": 207391,
+    "checkpoint": 432055901,
+    "test_images": 10172592,
+    "all_test_triplets": 33320567,
+    "minimum_inference_package": 442435884,
+    "full_test_evaluation_package": 465583859,
+    "full_data_training_evaluation_package": 972988767,
+    "original_download_zip_not_needed": 534256937
+  },
+  "package_directory_lists": {
+    "minimum_inference": [
+      "Root source files",
+      "models/",
+      "utils/",
+      "checkpoints/dtiuie_ckpt.pth",
+      "dataset/test/images/"
+    ],
+    "full_test_evaluation": [
+      "Root source files",
+      "models/",
+      "utils/",
+      "checkpoints/dtiuie_ckpt.pth",
+      "dataset/test/images/",
+      "dataset/test/reference/",
+      "dataset/test/masks_png/"
+    ],
+    "full_data_training_evaluation": [
+      "Root source files",
+      "models/",
+      "utils/",
+      "checkpoints/dtiuie_ckpt.pth",
+      "dataset/"
+    ]
+  },
+  "package_notes": [
+    "Package sizes reflect the project inventory before new cloud_reproduction artifacts and compression; final package size must be measured when packaging.",
+    "Exclude .git, __pycache__, outputs, historical records and the original downloaded TIUIED.zip backup.",
+    "No upload package was created by this audit."
+  ],
+  "code_import_correction": "underwater_test.py line 80 still imports TIUIED, while line 81 instantiates DTIUIE. The import bug is not fixed in the original file."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "figures": 10,
+  "figure_formats": [
+    "PNG",
+    "PDF",
+    "SVG"
+  ],
+  "matlab_editable_figures": 3,
+  "gpu_samples": 94,
+  "epochs": 100,
+  "steps": 38100,
+  "portable_sources_hash_checked": 105,
+  "portable_csv_files_byte_identical": 7,
+  "offline_dashboard": "PASS",
+  "pdf": [
+    {
+      "file": "DTIUIE_reproduction_report.pdf",
+      "pages": 12,
+      "bytes": 11988084,
+      "missing_glyphs": 0,
+      "overfull_boxes": 0
+    },
+    {
+      "file": "DTIUIE_handover.pdf",
+      "pages": 6,
+      "bytes": 161951,
+      "missing_glyphs": 0,
+      "overfull_boxes": 0
+    }
+  ],
+  "origin": "not available; failed COM evidence and rebuild scripts included"
+}

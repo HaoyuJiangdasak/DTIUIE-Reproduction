@@ -1,0 +1,7 @@
+numpy==1.23.5
+Pillow==9.4.0
+einops==0.6.1
+timm==0.9.7
+tqdm==4.65.0
+huggingface-hub==0.26.2
+safetensors==0.4.3

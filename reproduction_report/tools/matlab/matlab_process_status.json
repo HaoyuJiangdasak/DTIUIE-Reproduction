@@ -1,0 +1,9 @@
+﻿{
+    "executable":  "D:\\Program Files\\MATLAB\\R2025b\\bin\\matlab.EXE",
+    "batch":  "run(\u0027C:/Users/Lenovo/Desktop/DTIUIE/reproduction_report/scripts/plot_matlab.m\u0027)",
+    "started_local":  "2026-10-03T21:59:42.6291558+08:00",
+    "finished_local":  "2026-10-03T22:00:24.9278185+08:00",
+    "exit_code":  0,
+    "stdout":  "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\tools\\matlab\\matlab_stdout.log",
+    "stderr":  "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\tools\\matlab\\matlab_stderr.log"
+}

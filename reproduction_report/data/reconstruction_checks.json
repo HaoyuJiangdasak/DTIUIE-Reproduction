@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "epochs_complete": true,
+  "iteration_steps_contiguous": true,
+  "tensorboard_duplicate_steps_per_tag": 0,
+  "nonfinite_scalar_values": 0,
+  "feature_start_step": 3810,
+  "feature_only_epoch_11_plus": true,
+  "E_equals_pixel_plus_feature_max_float32_error": 1.4901161193847656e-08,
+  "S_equals_three_CE_losses_sum_max_float32_error": 4.76837158203125e-07,
+  "epoch_averages_checked_against_complete_iteration_values": true,
+  "logged_E_cosine_schedule_checked_against_code": true,
+  "gpu_timestamp_source": "checked_at_utc; history filename denotes completion time and can be much later during backup",
+  "missing_power_left_empty": true,
+  "invalid_total_loss_zero_excluded_from_valid_results": true,
+  "terminal_postfix_duplicate_rule": "Last occurrence per (epoch,batch) wins; initial tqdm updates carry stale previous batch losses"
+}

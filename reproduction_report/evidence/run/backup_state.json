@@ -1,0 +1,117 @@
+{
+  "last_bucket": 9,
+  "observed_epoch": 90,
+  "backup": {
+    "path": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\cloud_training_results\\checkpoint_backups\\latest_full-observed_epoch_090-20261003T115256.832762Z.pth",
+    "sha256": "02c678796e229b3d019dc4ececd7d832bb38667983bc0d7999c870f42a12e04b",
+    "size_bytes": 767252349,
+    "remote_mtime_unix": 1791028324,
+    "already_present": false,
+    "observed_last_saved_epoch": 90,
+    "heartbeat_before": {
+      "epoch": 91,
+      "batch": 60,
+      "total_batches": 381,
+      "global_step": 34350,
+      "loss_E": 0.039626844227313995,
+      "loss_S": 0.32728496193885803,
+      "loss_SA": 0.16057196259498596,
+      "last_saved_epoch": 90,
+      "latest_full": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003/latest_full.pth",
+      "run_id": "463f314c2d0645cfaa3568eae4df0753",
+      "status": "running",
+      "pid": 21263,
+      "updated_at_utc": "2026-10-03T11:52:54.319689+00:00",
+      "elapsed_seconds": 28761.7760763634,
+      "optimizers": {
+        "optimizer_E": [
+          {
+            "lr": 3.985215271097539e-06,
+            "weight_decay": 0.01,
+            "momentum": null,
+            "betas": [
+              0.9,
+              0.999
+            ]
+          }
+        ],
+        "optimizer_S": [
+          {
+            "lr": 0.0007000584231802124,
+            "weight_decay": 0.0001,
+            "momentum": 0.9,
+            "betas": null
+          }
+        ],
+        "optimizer_SA": [
+          {
+            "lr": 0.02,
+            "weight_decay": 0.0001,
+            "momentum": 0.9,
+            "betas": null
+          }
+        ]
+      },
+      "scalers": {
+        "scaler_E": 8589934592.0,
+        "scaler_S": 8589934592.0,
+        "scaler_SA": 8589934592.0
+      },
+      "gpu_peak_allocated_bytes": 16816599552,
+      "gpu_peak_reserved_bytes": 21049114624
+    },
+    "heartbeat_after": {
+      "epoch": 94,
+      "batch": 87,
+      "total_batches": 381,
+      "global_step": 35520,
+      "loss_E": 0.02530999295413494,
+      "loss_S": 0.2323249727487564,
+      "loss_SA": 0.34719204902648926,
+      "last_saved_epoch": 93,
+      "latest_full": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003/latest_full.pth",
+      "run_id": "463f314c2d0645cfaa3568eae4df0753",
+      "status": "running",
+      "pid": 21263,
+      "updated_at_utc": "2026-10-03T12:09:20.225157+00:00",
+      "elapsed_seconds": 29747.68154401146,
+      "optimizers": {
+        "optimizer_E": [
+          {
+            "lr": 2.4703615493381748e-06,
+            "weight_decay": 0.01,
+            "momentum": null,
+            "betas": [
+              0.9,
+              0.999
+            ]
+          }
+        ],
+        "optimizer_S": [
+          {
+            "lr": 0.0003955575235538351,
+            "weight_decay": 0.0001,
+            "momentum": 0.9,
+            "betas": null
+          }
+        ],
+        "optimizer_SA": [
+          {
+            "lr": 0.02,
+            "weight_decay": 0.0001,
+            "momentum": 0.9,
+            "betas": null
+          }
+        ]
+      },
+      "scalers": {
+        "scaler_E": 8589934592.0,
+        "scaler_S": 8589934592.0,
+        "scaler_SA": 8589934592.0
+      },
+      "gpu_peak_allocated_bytes": 16816599552,
+      "gpu_peak_reserved_bytes": 21049114624
+    },
+    "epoch_label_is_observation": true
+  }
+}

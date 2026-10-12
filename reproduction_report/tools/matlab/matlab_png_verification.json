@@ -1,0 +1,29 @@
+[
+  {
+    "file": "matlab_gpu_temperature.png",
+    "width_px": 3301,
+    "height_px": 1912,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  {
+    "file": "matlab_gpu_utilization_memory.png",
+    "width_px": 4183,
+    "height_px": 2951,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  {
+    "file": "matlab_training_validation.png",
+    "width_px": 4104,
+    "height_px": 2958,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  }
+]

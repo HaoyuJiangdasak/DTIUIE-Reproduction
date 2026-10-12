@@ -1,0 +1,157 @@
+{
+  "status": "complete",
+  "started_at_utc": "2026-10-02T15:41:38.563207+00:00",
+  "python": "3.9.25",
+  "packages": {
+    "numpy": "1.23.5",
+    "Pillow": "11.3.0",
+    "timm": "0.9.7",
+    "einops": "0.6.1"
+  },
+  "torch": "2.7.1+cu128",
+  "torchvision": "0.22.1+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn_version": 90701,
+  "device": "cuda:0",
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "compute_capability": [
+      12,
+      0
+    ],
+    "total_memory_bytes": 8546484224,
+    "peak_allocated_bytes": 706305024,
+    "peak_reserved_bytes": 987758592
+  },
+  "checkpoint": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\checkpoints\\dtiuie_ckpt.pth",
+  "checkpoint_sha256": "e9449842c0f81211f72bceacba63a7d1d2c085c920e00901e26e2e40dea0c7b6",
+  "checkpoint_epoch": 28,
+  "guidance": "model_S",
+  "input_dir": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\dataset\\test\\images",
+  "output_dir": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\cloud_reproduction\\smoke_model_S",
+  "limit": 4,
+  "expected_count": 4,
+  "completed_count": 4,
+  "input_color": "RGB",
+  "input_range": [
+    0.0,
+    1.0
+  ],
+  "input_normalization": "PIL RGB to torchvision to_tensor; no mean/std",
+  "preprocessing": "bicubic align to multiples of 32 (area cap 1088x1920), then bicubic to 256x256; align_corners=False",
+  "output_size_hw": [
+    256,
+    256
+  ],
+  "postprocessing": "original model normalize_img; original bicubic 256x256; multiply by 255 then uint8 truncation",
+  "jpeg_encoding": "PIL JPEG defaults; original JPG/JPEG basename preserved",
+  "additional_png": true,
+  "model_E_parameters": 8923734,
+  "guidance_parameters": 41897064,
+  "precision": {
+    "model_dtype": "torch.float32",
+    "autocast": false,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "images": [
+    {
+      "input": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\dataset\\test\\images\\d_r_122_.jpg",
+      "input_size_hw": [
+        540,
+        960
+      ],
+      "aligned_size_hw": [
+        544,
+        960
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_122_.jpg",
+      "png": "png/d_r_122_.png",
+      "elapsed_seconds": 0.7134881000000002
+    },
+    {
+      "input": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\dataset\\test\\images\\d_r_129_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_129_.jpg",
+      "png": "png/d_r_129_.png",
+      "elapsed_seconds": 0.13392270000000028
+    },
+    {
+      "input": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\dataset\\test\\images\\d_r_144_.jpg",
+      "input_size_hw": [
+        480,
+        640
+      ],
+      "aligned_size_hw": [
+        480,
+        640
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_144_.jpg",
+      "png": "png/d_r_144_.png",
+      "elapsed_seconds": 0.13148739999999925
+    },
+    {
+      "input": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\dataset\\test\\images\\d_r_166_.jpg",
+      "input_size_hw": [
+        720,
+        1280
+      ],
+      "aligned_size_hw": [
+        736,
+        1280
+      ],
+      "output_shape_nchw": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "output_min": 0.0,
+      "output_max": 1.0,
+      "output_finite": true,
+      "output_range_valid": true,
+      "jpeg": "jpeg/d_r_166_.jpg",
+      "png": "png/d_r_166_.png",
+      "elapsed_seconds": 0.1915217999999994
+    }
+  ],
+  "inference_seconds": 1.1743281000000003,
+  "total_seconds": 3.8907368
+}

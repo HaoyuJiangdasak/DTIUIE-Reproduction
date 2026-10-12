@@ -1,0 +1,23 @@
+[
+  {
+    "file": "matlab_gpu_temperature.fig",
+    "editable_axes": 1,
+    "editable_line_objects": 1,
+    "largest_observed_point_count": 94,
+    "reopen_success": true
+  },
+  {
+    "file": "matlab_gpu_utilization_memory.fig",
+    "editable_axes": 2,
+    "editable_line_objects": 3,
+    "largest_observed_point_count": 94,
+    "reopen_success": true
+  },
+  {
+    "file": "matlab_training_validation.fig",
+    "editable_axes": 4,
+    "editable_line_objects": 8,
+    "largest_observed_point_count": 100,
+    "reopen_success": true
+  }
+]

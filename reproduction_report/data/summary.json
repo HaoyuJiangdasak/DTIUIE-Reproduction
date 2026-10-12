@@ -1,0 +1,353 @@
+{
+  "run_id": "463f314c2d0645cfaa3568eae4df0753",
+  "source_archive": "C:\\Users\\Lenovo\\Desktop\\DTIUIE\\reproduction_report\\evidence",
+  "started_at_utc": "2026-10-03T03:53:32.543886+00:00",
+  "completed_at_utc": "2026-10-03T12:45:46.135318+00:00",
+  "started_at_cst": "2026-10-03T11:53:32.543886+08:00",
+  "completed_at_cst": "2026-10-03T20:45:46.135318+08:00",
+  "elapsed_seconds_completed_record": 31933.591699803248,
+  "wall_clock_seconds_start_to_complete": 31933.591432094574,
+  "final_evaluation_and_completion_after_epoch_100_seconds": 10.775490999221802,
+  "epochs": 100,
+  "batches_per_epoch": 381,
+  "batch_size": 4,
+  "global_steps_completed_one_based": 38100,
+  "tensorboard_global_steps_zero_based": [
+    0,
+    38099
+  ],
+  "iteration_feature_loss_first_epoch": 11,
+  "iteration_feature_loss_count": 34290,
+  "tensorboard_scalar_count": 302090,
+  "terminal_progress_postfix_rows": 76200,
+  "terminal_distinct_epoch_batch_rows": 38100,
+  "terminal_redundant_rows_removed": 38100,
+  "best_internal_validation": {
+    "ssim": {
+      "score": 0.9268100261688232,
+      "epoch": 71,
+      "metrics": {
+        "psnr": 24.717359074689615,
+        "ssim": 0.9268100261688232,
+        "miou": 0.5887885093688965,
+        "dice": 0.6084908843040466,
+        "acc": 0.4016908125443892,
+        "uciqe": 0,
+        "uiqm": 0
+      }
+    },
+    "miou": {
+      "score": 0.5887885093688965,
+      "epoch": 71,
+      "metrics": {
+        "psnr": 24.717359074689615,
+        "ssim": 0.9268100261688232,
+        "miou": 0.5887885093688965,
+        "dice": 0.6084908843040466,
+        "acc": 0.4016908125443892,
+        "uciqe": 0,
+        "uiqm": 0
+      }
+    }
+  },
+  "epoch_100_model_SA": {
+    "psnr": 24.612018585205078,
+    "ssim": 0.9249369502067566,
+    "miou": 0.562244713306427,
+    "dice": 0.607654869556427
+  },
+  "final_log_model_S_different_protocol": {
+    "psnr_rounded": 24.5528,
+    "ssim_rounded": 0.9247,
+    "pixel_accuracy_invalid": 0.40178846879438923,
+    "dice": 0.5402146577835083,
+    "miou": 0.5148398280143738,
+    "guidance": "model_S",
+    "epoch": 100
+  },
+  "training_epoch_1": {
+    "epoch": 1,
+    "loss_E": 0.07698439806699753,
+    "loss_S": 3.713038921356201,
+    "loss_SA_mean": 1.1603847135083256,
+    "loss_enc_pixel_mean": 0.07698439925987263,
+    "loss_enc_feature_mean": null,
+    "psnr": 21.403446197509766,
+    "ssim": 0.8244230151176453,
+    "miou": 0.22873874008655548,
+    "dice": 0.5142824053764343,
+    "lr_E": 9.757730003912002e-05,
+    "lr_E_used": 0.0001,
+    "lr_S_derived": 0.01951301233713678,
+    "lr_SA_code": 0.02,
+    "epoch_end_utc": "2026-10-03T03:58:50.777233+00:00",
+    "elapsed_hours": 0.0883981520599789,
+    "epoch_duration_seconds": 318.2333474159241,
+    "train_duration_seconds": 307.61923718452454,
+    "val_duration_seconds": 10.614110231399536,
+    "iteration_samples": 381,
+    "validation_guidance": "model_SA",
+    "training_total_loss_placeholder": 0.0,
+    "pixel_accuracy_invalid": 0.4015655517578125,
+    "uciqe_placeholder": 0.0,
+    "uiqm_placeholder": 0.0
+  },
+  "training_epoch_100": {
+    "epoch": 100,
+    "loss_E": 0.038424111902713776,
+    "loss_S": 0.2031298130750656,
+    "loss_SA_mean": 0.07028704408429114,
+    "loss_enc_pixel_mean": 0.025668110363576514,
+    "loss_enc_feature_mean": 0.012756003465337234,
+    "psnr": 24.612018585205078,
+    "ssim": 0.9249369502067566,
+    "miou": 0.562244713306427,
+    "dice": 0.607654869556427,
+    "lr_E": 9.999999974752427e-07,
+    "lr_E_used": 1.0301540669388487e-06,
+    "lr_S_derived": 0.0001,
+    "lr_SA_code": 0.02,
+    "epoch_end_utc": "2026-10-03T12:45:35.359827+00:00",
+    "elapsed_hours": 8.867448872592714,
+    "epoch_duration_seconds": 321.44448924064636,
+    "train_duration_seconds": 312.2999196052551,
+    "val_duration_seconds": 9.144569635391235,
+    "iteration_samples": 381,
+    "validation_guidance": "model_SA",
+    "training_total_loss_placeholder": 0.0,
+    "pixel_accuracy_invalid": 0.4016701579093933,
+    "uciqe_placeholder": 0.0,
+    "uiqm_placeholder": 0.0
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4090 D",
+    "history_files": 94,
+    "valid_samples": 94,
+    "running_samples": 92,
+    "first_sample_utc": "2026-10-03T03:54:02.959830+00:00",
+    "last_sample_utc": "2026-10-03T12:52:55.161690+00:00",
+    "sample_span_hours": 8.981167183319728,
+    "running_util_pct": {
+      "n": 92,
+      "min": 62.0,
+      "max": 100.0,
+      "mean_unweighted_samples": 91.72826086956522,
+      "median": 93.0,
+      "quartiles_exclusive": [
+        87.0,
+        93.0,
+        100.0
+      ]
+    },
+    "running_vram_used_mib": {
+      "n": 92,
+      "min": 15732.0,
+      "max": 18734.0,
+      "mean_unweighted_samples": 18063.739130434784,
+      "median": 18718.0,
+      "quartiles_exclusive": [
+        17801.0,
+        18718.0,
+        18724.0
+      ]
+    },
+    "running_temp_c": {
+      "n": 92,
+      "min": 53.0,
+      "max": 71.0,
+      "mean_unweighted_samples": 65.94565217391305,
+      "median": 66.0,
+      "quartiles_exclusive": [
+        64.0,
+        66.0,
+        67.75
+      ]
+    },
+    "gap_threshold_seconds": 420,
+    "gaps": [
+      {
+        "start_utc": "2026-10-03T04:47:55.401594+00:00",
+        "end_utc": "2026-10-03T04:57:55.455610+00:00",
+        "gap_seconds": 600.0540161132812,
+        "nominal_interval_seconds": 300,
+        "interpretation": "No instantaneous GPU measurements inside this gap; long checkpoint downloads also block sequential polling"
+      },
+      {
+        "start_utc": "2026-10-03T05:37:55.559517+00:00",
+        "end_utc": "2026-10-03T05:57:55.616933+00:00",
+        "gap_seconds": 1200.0574162006378,
+        "nominal_interval_seconds": 300,
+        "interpretation": "No instantaneous GPU measurements inside this gap; long checkpoint downloads also block sequential polling"
+      },
+      {
+        "start_utc": "2026-10-03T07:27:54.685368+00:00",
+        "end_utc": "2026-10-03T07:42:54.712813+00:00",
+        "gap_seconds": 900.0274448394775,
+        "nominal_interval_seconds": 300,
+        "interpretation": "No instantaneous GPU measurements inside this gap; long checkpoint downloads also block sequential polling"
+      },
+      {
+        "start_utc": "2026-10-03T08:22:54.767718+00:00",
+        "end_utc": "2026-10-03T08:37:54.788916+00:00",
+        "gap_seconds": 900.0211980342865,
+        "nominal_interval_seconds": 300,
+        "interpretation": "No instantaneous GPU measurements inside this gap; long checkpoint downloads also block sequential polling"
+      },
+      {
+        "start_utc": "2026-10-03T09:12:54.832356+00:00",
+        "end_utc": "2026-10-03T09:22:54.845565+00:00",
+        "gap_seconds": 600.013209104538,
+        "nominal_interval_seconds": 300,
+        "interpretation": "No instantaneous GPU measurements inside this gap; long checkpoint downloads also block sequential polling"
+      },
+      {
+        "start_utc": "2026-10-03T10:07:54.923421+00:00",
+        "end_utc": "2026-10-03T10:22:55.265669+00:00",
+        "gap_seconds": 900.3422482013702,
+        "nominal_interval_seconds": 300,
+        "interpretation": "No instantaneous GPU measurements inside this gap; long checkpoint downloads also block sequential polling"
+      },
+      {
+        "start_utc": "2026-10-03T11:02:55.089742+00:00",
+        "end_utc": "2026-10-03T11:22:55.038611+00:00",
+        "gap_seconds": 1199.9488689899445,
+        "nominal_interval_seconds": 300,
+        "interpretation": "No instantaneous GPU measurements inside this gap; long checkpoint downloads also block sequential polling"
+      },
+      {
+        "start_utc": "2026-10-03T11:52:55.077728+00:00",
+        "end_utc": "2026-10-03T12:12:55.142792+00:00",
+        "gap_seconds": 1200.0650639533997,
+        "nominal_interval_seconds": 300,
+        "interpretation": "No instantaneous GPU measurements inside this gap; long checkpoint downloads also block sequential polling"
+      }
+    ],
+    "gap_count_above_7_minutes": 8,
+    "longest_gap_seconds": 1200.0650639533997,
+    "sum_gap_seconds_above_7_minutes": 7500.529465436935,
+    "sum_extra_seconds_beyond_nominal_300_within_long_gaps": 5100.529465436935,
+    "power_recorded": false,
+    "energy_kwh_available": false,
+    "sampling_interpretation": "Discrete instantaneous telemetry, mostly five-minute checks; arithmetic mean is unweighted samples, not continuous/time-weighted GPU utilization",
+    "training_coverage_span_hours": 8.814503511124187
+  },
+  "monitor": {
+    "connection_success": 94,
+    "connection_failed": 0,
+    "warning_events": 0,
+    "restarts": 0,
+    "local_checkpoint_backups": 9,
+    "backup_observed_epochs": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90
+    ]
+  },
+  "epoch_duration_statistics_seconds": {
+    "n": 100,
+    "min": 299.4091305732727,
+    "max": 323.09708046913147,
+    "mean_unweighted_samples": 319.2281594133377,
+    "median": 321.09944784641266,
+    "quartiles_exclusive": [
+      320.5531751513481,
+      321.09944784641266,
+      321.39235693216324
+    ]
+  },
+  "warmup_epochs_1_to_10_mean_seconds": 302.17461144924164,
+  "feature_phase_epochs_11_to_100_mean_seconds": 321.12299807601505,
+  "invalid_metrics": {
+    "training/epoch_loss": "AverageMeter.update is commented out; placeholder 0, not total objective",
+    "validation/epoch_uciqe": "Evaluator returns 0 without calculating UCIQE",
+    "validation/epoch_uiqm": "Evaluator returns 0 without calculating UIQM",
+    "validation/epoch_acc": "Original pixel accuracy applies softmax(...).long() before argmax: probabilities are truncated to zero, invalidating predicted labels; do not report as valid pixAcc",
+    "terminal/Train PSNR": "train_average_psnr_meter is never updated; logged 0 is a placeholder"
+  },
+  "lr_measurement": {
+    "lr_E": "TensorBoard measured post-scheduler-step value",
+    "lr_E_used": "initial optimizer lr for epoch 1; previous epoch measured lr thereafter",
+    "lr_S_derived": "code-derived cosine periods=[10,90], base=0.02, eta_min=0.0001; not a logged epoch measurement",
+    "lr_SA_code": "constant 0.02, code scheduler_sa targets optimizer_seg and is not stepped; supported by sampled heartbeat optimizer values"
+  },
+  "epoch_time_measurement": "Epoch completion from max wall_time of TensorBoard validation scalars. Difference to previous validation completion (first uses run start); includes boundary checkpoint/save overhead. train_duration_seconds includes preceding boundary overhead. val_duration is validation-end minus epoch training scalar timestamp. Exact per-kernel timings unavailable.",
+  "evidence_limit": "Internal model_SA validation and the model_S final evaluation use different guidance/segmentation networks. These internal evaluations are not equivalent to paper Tables II/III/IV independent downstream retraining protocols. Paper Table V evaluates image quality on the separate SUIM-E/UIEB datasets with a separate metric protocol. No training PSNR, valid pixAcc, UIQM/UCIQE, GPU power or energy were measured.",
+  "source_code_sha256": {
+    "original_source_sha256": "213bdf088fc32e8294bcb9e7f1c13f5cf1dd5270884926141ccdc2d5405143e0",
+    "monitored_source_sha256": "f52f96b3bfb1369c3eb33bee194aafd616dd02baa8628348fc7101a91a93cef7",
+    "observer_source_sha256": "c17033af2a169680e6a41e7099ab94cff251a44a6a35829ba7bc080610c2e151"
+  },
+  "packages": {
+    "torchvision": "0.14.1+cu116",
+    "numpy": "1.23.5",
+    "Pillow": "9.4.0",
+    "timm": "0.9.7",
+    "einops": "0.6.1",
+    "pandas": "2.0.0",
+    "scikit-image": "0.20.0",
+    "scipy": "1.9.1",
+    "kornia": "0.7.0",
+    "tensorboardX": "2.6"
+  },
+  "torch": "1.13.1+cu116",
+  "cuda_runtime": "11.6",
+  "seed_behavior": "Author seed setting remains commented out",
+  "args": {
+    "seed": 2022,
+    "database": "TIUIED",
+    "crop_size": 256,
+    "model_E": "model_dtiuie",
+    "model_S": "vgg16",
+    "resume": "False",
+    "resume_path": "/path/to/your/net.pth",
+    "use_pretain": "False",
+    "pretrained": null,
+    "val_criterion": "mIoU",
+    "batch_size": 4,
+    "epochs": 100,
+    "amp": false,
+    "gpus": 1,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.001,
+    "momentum": 0.9,
+    "decay_interval": [
+      150,
+      180
+    ],
+    "decay_ratio": 0.8,
+    "warmup_epochs": 10,
+    "log_dir": "tensorboard_logs",
+    "save_best_checkpoint": true,
+    "save_iter_checkpoint": false,
+    "save_final_checkpoint": true,
+    "loss_enc_pixel": "L1Loss",
+    "loss_enc_pixel_weight": 1.0,
+    "loss_enc_feat": "FeatureLoss",
+    "loss_enc_feat_weight": 1.0,
+    "loss_seg_raw": "AUXCELoss",
+    "loss_seg_raw_weight": 0.34,
+    "loss_seg_enc": "AUXCELoss",
+    "loss_seg_enc_weight": 0.34,
+    "loss_seg_mix": "AUXCELoss",
+    "loss_seg_mix_weight": 0.34,
+    "loss_seg_sa": "AUXCELoss",
+    "loss_seg_sa_weight": 1.0,
+    "info": null,
+    "run_dir": "/root/autodl-tmp/DTIUIE/training_runs/from_scratch_20261003",
+    "resume_full": null,
+    "cudnn_benchmark": true,
+    "local_rank": -1,
+    "log_format_str": "tensorboard_logs/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32",
+    "best_model_file": "checkpoints/model_dtiuie_vgg/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32-best",
+    "final_model_file": "results/model_dtiuie_vgg/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32-final",
+    "save_result_file": "results/model_dtiuie_vgg/model_dtiuie-vgg16-TIUIED-lr=0.0001-wd=0.001-bs=4-10-03-2026-11-53-32",
+    "tensorboard_dir": "tensorboardLogs",
+    "classes": 8
+  }
+}

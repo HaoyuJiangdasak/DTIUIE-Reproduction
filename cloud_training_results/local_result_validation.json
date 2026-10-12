@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "archive_sha256_verified": "ebcddb62d62408689e06aca12e8f5f2f8892290aaeded0004f4b8afc1c4a04a2",
+  "epoch": 100,
+  "global_step": 38100,
+  "checks": [
+    {
+      "checkpoint": "final",
+      "epoch": 100,
+      "checkpoint_sha256_verified": true,
+      "jpeg_count": 110,
+      "png_count": 110,
+      "images_decoded": true
+    },
+    {
+      "checkpoint": "best_ssim",
+      "epoch": 71,
+      "checkpoint_sha256_verified": true,
+      "jpeg_count": 110,
+      "png_count": 110,
+      "images_decoded": true
+    },
+    {
+      "checkpoint": "best_miou",
+      "epoch": 71,
+      "checkpoint_sha256_verified": true,
+      "jpeg_count": 110,
+      "png_count": 110,
+      "images_decoded": true
+    }
+  ],
+  "scope": "Transfer/file validation; no new evaluation metrics computed"
+}
